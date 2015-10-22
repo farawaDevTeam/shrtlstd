@@ -4,20 +4,21 @@
 
 var gulp = require('gulp');
 var inject = require('gulp-inject');
-var buildConfig = require('../../config/config.json')['build'];
+var component = process.env.INIT_CWD.split((__dirname.split('gulp_tasks')[0]))[1];
+var distFolder = __dirname + '/../../dist/' + component;
 
 gulp.task('inject', ['html', 'css', 'js'], function(){
     injectFiles();
 });
 
 var injectFiles =  function(cb){
-    var target = gulp.src(buildConfig.dist + '/index.html');
-    var sources = gulp.src([buildConfig.dist + '/stylesheets/**/*.css', 
-    	buildConfig.dist + '/js/libs.js', 
-    	buildConfig.dist + '/js/**/*.js'], {read: false});
+    var target = gulp.src(distFolder + '/index.html');
+    var sources = gulp.src([distFolder + '/stylesheets/**/*.css',
+        distFolder + '/js/libs.js',
+        distFolder + '/js/**/*.js'], {read: false});
 
-    return target.pipe(inject(sources, {ignorePath: buildConfig.dist, addRootSlash: false}))
-        .pipe(gulp.dest(buildConfig.dist))
+    return target.pipe(inject(sources, {ignorePath: '../../dist/' + component, addRootSlash: false}))
+        .pipe(gulp.dest(distFolder))
         .on('end', function(){
             cb && cb();
         });

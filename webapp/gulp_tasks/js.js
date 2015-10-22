@@ -8,6 +8,8 @@ var uglify = require('gulp-uglify');
 var buildConfig = require('../../config/config.json')['build'];
 var gulpif = require('gulp-if');
 var argv = require('yargs').argv;
+var component = process.env.INIT_CWD.split((__dirname.split('gulp_tasks')[0]))[1];
+var distFolder = __dirname + '/../../dist/' + component;
 
 gulp.task('js', ['js-libs'], function(){
 
@@ -19,12 +21,10 @@ gulp.task('js', ['js-libs'], function(){
     ])
         .pipe(gulpif(env === 'prod', uglify()))
         .pipe(gulpif(env === 'prod', concat('main.js')))
-        .pipe(gulp.dest(buildConfig.dist + '/js'));
+        .pipe(gulp.dest(distFolder + '/js'));
 });
 
 gulp.task('js-libs', function(){
-
-    var component = process.env.INIT_CWD.split((__dirname.split('gulp_tasks')[0]))[1];
     var libs = require('../' + component + '/libs.json').libs;
 
     var libsSrc = [];
@@ -34,5 +34,5 @@ gulp.task('js-libs', function(){
     });
     return gulp.src(libsSrc).pipe(uglify())
         .pipe(concat('libs.js'))
-        .pipe(gulp.dest(buildConfig.dist + '/js'));
+        .pipe(gulp.dest(distFolder + '/js'));
 });

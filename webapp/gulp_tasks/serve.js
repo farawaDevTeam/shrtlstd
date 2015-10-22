@@ -11,12 +11,14 @@ var connect = require('gulp-connect');
 var reload = connect.reload;
 var through2 = require('through2');
 var sass = require('gulp-sass');
+var component = process.env.INIT_CWD.split((__dirname.split('gulp_tasks')[0]))[1];
+var distFolder = __dirname + '/../../dist/' + component;
 
 gulp.task('serve', ['build'], function() {
 
     connect.server({
         port: 4500,
-        root: buildConfig.dist,
+        root: distFolder,
         livereload: true
     });
 
@@ -33,7 +35,7 @@ gulp.task('serve', ['build'], function() {
             },
             function(file){
                 var filePath = file.path;
-                var fileDestination = buildConfig.dist;
+                var fileDestination = distFolder;
                 var fileToBuild = gulp.src(filePath, {base: buildConfig.src});
 
                 //Case it is stylesheet

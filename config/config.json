@@ -1,0 +1,11 @@
+{
+  "build": {
+    "src": "app",
+    "dist": "dist"
+  },
+  "dev": {
+  },
+  "prod": {
+
+  }
+}

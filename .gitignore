@@ -1,0 +1,11 @@
+# Build
+dist
+
+# Node
+node_modules
+
+# Tests
+testsReports
+
+# Webstorm
+.idea

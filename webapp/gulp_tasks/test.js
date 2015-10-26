@@ -19,6 +19,7 @@ gulp.task('test', function(cb){
 
     js.push.apply(js,
         [
+        __dirname + '/../../node_modules/angular-mocks/angular-mocks.js', 
         __dirname + '/../**/' + buildConfig.src + '/**/*.js'
     ])
     gulp.src(js)

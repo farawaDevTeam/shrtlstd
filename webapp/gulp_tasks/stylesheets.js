@@ -10,6 +10,7 @@ var gulpif = require('gulp-if');
 var argv = require('yargs').argv;
 var component = process.env.INIT_CWD.split((__dirname.split('gulp_tasks')[0]))[1];
 var distFolder = __dirname + '/../../dist/' + component;
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('css', ['trueCss'], function(){
 
@@ -20,6 +21,7 @@ gulp.task('css', ['trueCss'], function(){
     		buildConfig.src + '/components/**/*.scss'
     	])
         .pipe(sass())
+        .pipe(autoprefixer())
         .pipe(gulpif(env === 'prod', concat('main.css')))
         .pipe(gulp.dest(distFolder + '/stylesheets'));
 });

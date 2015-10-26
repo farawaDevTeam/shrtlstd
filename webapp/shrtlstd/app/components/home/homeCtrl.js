@@ -3,7 +3,7 @@
  */
 
 angular.module('homeModule', [])
-    .controller('homeCtrl', ['$http', function($http){
+    .controller('homeCtrl', function($http){
         'use strict';
         var self = this;
 
@@ -72,7 +72,6 @@ angular.module('homeModule', [])
 		         	console.log("self.data2 = ", self.data);
 		    });
         }*/
-        
-        
 
-    }]);
+        displayLatestCompet();
+    });

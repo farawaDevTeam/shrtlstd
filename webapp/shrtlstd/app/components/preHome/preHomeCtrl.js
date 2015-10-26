@@ -1,21 +1,18 @@
-(function(){
-	'use strict';
 
-	angular.module('preHomeModule', []).controller('preHomeCtrl', preHomeCtrl);
+angular.module('preHomeModule', [])
+	.controller('preHomeCtrl', function($window , $state){
+			'use strict';
 
-	/** @ngInject **/
-	function preHomeCtrl($window , $state){
-		var vm = this;
+			var vm = this;
 
-		vm.goHome = function(){
-			$state.go('home');
-		};
+			vm.goHome = function(){
+				$state.go('home');
+			};
 
-		//MAIN
-		if($window.localStorage.hasAlreadyCome){
-			vm.goHome();
-			return;
-		}
-		$window.localStorage.hasAlreadyCome = true;
-	}
-})();
+			//MAIN
+			if($window.localStorage.hasAlreadyCome){
+				vm.goHome();
+				return;
+			}
+			$window.localStorage.hasAlreadyCome = true;
+		});

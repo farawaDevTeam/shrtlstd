@@ -10,15 +10,35 @@
 	position: absolute;
   	top: 50%;
   	left: 50%;
-  	margin-left: -78px;
+  	margin-left: -224px;
   	margin-top: -48px;
+  	color : #fff;
+  	-webkit-transition: color 2s; /* For Safari 3.1 to 6.0 */
+    transition: color 2s;
+}
+
+.welcome:hover{
+	color : #d1b816;
+	cursor: pointer;
 }
 
 .copyright {
 	position: absolute;
 	bottom : 5px;
+	font-size : 20px;
 }
 
-button{
+.copyright span {
+	color : #d1b816;
+}
+
+button.btn-primary{
 	font-size : 25px !important;
+	background-color: #99d5cb;
+	border-color :#d1b816;
+}
+
+button.btn-primary:hover{
+	background-color: #d1b816;
+	border-color :#99d5cb;
 }

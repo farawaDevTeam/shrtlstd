@@ -12,7 +12,7 @@ var component = process.env.INIT_CWD.split((__dirname.split('gulp_tasks')[0]))[1
 var distFolder = __dirname + '/../../dist/' + component;
 var autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('css', ['trueCss'], function(){
+gulp.task('css', function(){
 
     var env = argv.NODE_ENV | 'dev';
 

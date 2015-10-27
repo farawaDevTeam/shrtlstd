@@ -19,7 +19,7 @@ h1, p, div, li, ul, ol, span, a, img, h1, h2, h3, h4 {
 	margin:0;
 }
 
-nav, h1, h2, h3, h4{
+nav, h1, h2, h3, h4, .copyright, button{
 	font-family : importantFontFace, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -37,4 +37,10 @@ h3{
 
 h4{
 	font-size : 40px;
+}
+
+h1 span{
+	border: solid 3px #d1b816;
+	padding: 10px;
+	color : #99d5cb;
 }

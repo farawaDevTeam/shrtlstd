@@ -3,16 +3,16 @@ angular.module('preHomeModule', [])
 	.controller('preHomeCtrl', function($window , $state){
 			'use strict';
 
-			var vm = this;
+			var self = this;
 
-			vm.goHome = function(){
+			self.goHome = function(){
+				$window.localStorage.hasAlreadyCome = true;
 				$state.go('home');
 			};
 
 			//MAIN
 			if($window.localStorage.hasAlreadyCome){
-				vm.goHome();
+				self.goHome();
 				return;
 			}
-			$window.localStorage.hasAlreadyCome = true;
 		});

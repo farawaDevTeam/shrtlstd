@@ -7,3 +7,8 @@ html, body, .my-view{
   width: 100%;
   height: 100%;
 }
+
+h1, p, div, li, ul, ol, span, a {
+	padding : 0;
+	margin:0;
+}

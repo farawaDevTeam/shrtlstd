@@ -27,6 +27,7 @@ gulp.task('serve', ['build'], function() {
 
         gulp.watch([
                 '**/*.html',
+                'components/**/*.scss',
                 'stylesheets/**/*.scss',
                 '**/*.js'
             ],
@@ -40,7 +41,9 @@ gulp.task('serve', ['build'], function() {
 
                 //Case it is stylesheet
                 if(_.endsWith(filePath, '.scss')){
+                    fileToBuild = gulp.src(filePath, {base: buildConfig.src + '/components'});
                     fileToBuild = fileToBuild.pipe(sass());
+                    fileDestination += '/stylesheets';
                 }
                 //Case it is js
                 else if(_.endsWith(filePath, '.js')){

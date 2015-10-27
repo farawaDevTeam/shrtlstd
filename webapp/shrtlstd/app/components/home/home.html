@@ -1,8 +1,8 @@
-<section class="container">
+<section class="mainContent">
     <section class="identification">
     	<nav>
-    		<a href="#">{{ctrl.identification.connection}}</a> |
-    		<a href="#">{{ctrl.identification.creation}}</a>
+    		<a href="#"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> {{ctrl.identification.connection}}</a>
+    		<a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ctrl.identification.creation}}</a>
     	</nav>
     </section>
 
@@ -10,8 +10,8 @@
     	<h1>SHRTLSTD</h1>
     </header>
 
-    <nav>
-    	<a href="#">Home</a>
+    <nav class="navigation">
+    	<a href="#" class="here">Home</a>
     	<a href="#">Les Compet'</a>
     	<a href="#">La communauté</a>
     	<a href="#">Les vidéos</a>
@@ -20,10 +20,144 @@
 
     <section>
     	<h2>Derniers compèt'</h2>
+    	<div class="liste">
+    		<!-- <div class="lastcompets col-lg-3 col-md-3 col-xs-1" ng-repeat="lc in ctrl.lastcompets">
+    			<div class="mozaicCompet">
+    				<img ng-src="../../images/{{lc.img}}" alt="{{lc.user.entreprise}}" width="200" height="200" />
+    			</div>
+    			<div class="information">
+	    			<p>Déposé le : {{lc.dateDepot}}</p>
+	    			<p>A rendre le : {{lc.dateFin}}</p>
+	    			<p class="shortDesc">{{lc.description}}</p>
+	    		</div>
+	    		<div>
+	    			<h4>{{lc.user.entreprise}}</h4>
+	    			<p>{{lc.nom}}</p>
+	    		</div>
+    		</div> -->
+
+            <div class="compete col-lg-6">
+                <img ng-src="../../images/{{ctrl.lastcompets[0].img}}" alt="{{lc.user.entreprise}}" width="951" />
+                
+                <div class="information">
+                    <p>Déposé le : {{ctrl.lastcompets[0].dateDepot}}</p>
+                    <p>A rendre le : {{ctrl.lastcompets[0].dateFin}}</p>
+                    <p class="shortDesc">{{ctrl.lastcompets[0].description}}</p>
+                </div>
+            </div>
+            <div class="compete col-lg-4">
+                <img ng-src="../../images/{{ctrl.lastcompets[1].img}}" alt="{{lc.user.entreprise}}" height="598"/>
+                <div class="information">
+                    <p>Déposé le : {{ctrl.lastcompets[1].dateDepot}}</p>
+                    <p>A rendre le : {{ctrl.lastcompets[1].dateFin}}</p>
+                    <p class="shortDesc">{{ctrl.lastcompets[1].description}}</p>
+                </div>
+            </div>
+            <div class="compete col-lg-2">
+                <img ng-src="../../images/{{ctrl.lastcompets[2].img}}" alt="{{lc.user.entreprise}}" height="598"/>
+                <div class="information">
+                    <p>Déposé le : {{ctrl.lastcompets[2].dateDepot}}</p>
+                    <p>A rendre le : {{ctrl.lastcompets[2].dateFin}}</p>
+                    <p class="shortDesc">{{ctrl.lastcompets[2].description}}</p>
+                </div>
+            </div>
+
+            <div class="compete col-lg-3">
+                <img ng-src="../../images/{{ctrl.lastcompets[3].img}}" alt="{{lc.user.entreprise}}" height="598"/>
+                <div class="information">
+                    <p>Déposé le : {{ctrl.lastcompets[3].dateDepot}}</p>
+                    <p>A rendre le : {{ctrl.lastcompets[3].dateFin}}</p>
+                    <p class="shortDesc">{{ctrl.lastcompets[3].description}}</p>
+                </div>
+            </div>
+            <div class="compete col-lg-3">
+                <img ng-src="../../images/{{ctrl.lastcompets[4].img}}" alt="{{lc.user.entreprise}}" height="598"/>
+                <div class="information">
+                    <p>Déposé le : {{ctrl.lastcompets[4].dateDepot}}</p>
+                    <p>A rendre le : {{ctrl.lastcompets[4].dateFin}}</p>
+                    <p class="shortDesc">{{ctrl.lastcompets[4].description}}</p>
+                </div>
+            </div>
+            <div class="compete col-lg-6">
+                <img ng-src="../../images/{{ctrl.lastcompets[5].img}}" alt="{{lc.user.entreprise}}" height="598"/>
+                <div class="information">
+                    <p>Déposé le : {{ctrl.lastcompets[5].dateDepot}}</p>
+                    <p>A rendre le : {{ctrl.lastcompets[5].dateFin}}</p>
+                    <p class="shortDesc">{{ctrl.lastcompets[5].description}}</p>
+                </div>
+            </div>
+    	</div>
     </section>
     <hr>
     <section>
     	<h2>Dernières vidéos</h2>
+        <div class="liste">
+            <!-- <div class="lastcompets col-lg-3 col-md-3 col-xs-1" ng-repeat="lc in ctrl.lastcompets">
+                <div class="mozaicCompet">
+                    <img ng-src="../../images/{{lc.img}}" alt="{{lc.user.entreprise}}" width="200" height="200" />
+                </div>
+                <div class="information">
+                    <p>Déposé le : {{lc.dateDepot}}</p>
+                    <p>A rendre le : {{lc.dateFin}}</p>
+                    <p class="shortDesc">{{lc.description}}</p>
+                </div>
+                <div>
+                    <h4>{{lc.user.entreprise}}</h4>
+                    <p>{{lc.nom}}</p>
+                </div>
+            </div> -->
+
+            <div class="compete col-lg-6">
+                <img ng-src="../../images/{{ctrl.lastcompets[0].img}}" alt="{{lc.user.entreprise}}" width="951" />
+                
+                <div class="information">
+                    <p>Déposé le : {{ctrl.lastcompets[0].dateDepot}}</p>
+                    <p>A rendre le : {{ctrl.lastcompets[0].dateFin}}</p>
+                    <p class="shortDesc">{{ctrl.lastcompets[0].description}}</p>
+                </div>
+            </div>
+            <div class="compete col-lg-4">
+                <img ng-src="../../images/{{ctrl.lastcompets[1].img}}" alt="{{lc.user.entreprise}}" height="598"/>
+                <div class="information">
+                    <p>Déposé le : {{ctrl.lastcompets[1].dateDepot}}</p>
+                    <p>A rendre le : {{ctrl.lastcompets[1].dateFin}}</p>
+                    <p class="shortDesc">{{ctrl.lastcompets[1].description}}</p>
+                </div>
+            </div>
+            <div class="compete col-lg-2">
+                <img ng-src="../../images/{{ctrl.lastcompets[2].img}}" alt="{{lc.user.entreprise}}" height="598"/>
+                <div class="information">
+                    <p>Déposé le : {{ctrl.lastcompets[2].dateDepot}}</p>
+                    <p>A rendre le : {{ctrl.lastcompets[2].dateFin}}</p>
+                    <p class="shortDesc">{{ctrl.lastcompets[2].description}}</p>
+                </div>
+            </div>
+
+            <div class="compete col-lg-3">
+                <img ng-src="../../images/{{ctrl.lastcompets[3].img}}" alt="{{lc.user.entreprise}}" height="598"/>
+                <div class="information">
+                    <p>Déposé le : {{ctrl.lastcompets[3].dateDepot}}</p>
+                    <p>A rendre le : {{ctrl.lastcompets[3].dateFin}}</p>
+                    <p class="shortDesc">{{ctrl.lastcompets[3].description}}</p>
+                </div>
+            </div>
+            <div class="compete col-lg-3">
+                <img ng-src="../../images/{{ctrl.lastcompets[4].img}}" alt="{{lc.user.entreprise}}" height="598"/>
+                <div class="information">
+                    <p>Déposé le : {{ctrl.lastcompets[4].dateDepot}}</p>
+                    <p>A rendre le : {{ctrl.lastcompets[4].dateFin}}</p>
+                    <p class="shortDesc">{{ctrl.lastcompets[4].description}}</p>
+                </div>
+            </div>
+            <div class="compete col-lg-6">
+                <img ng-src="../../images/{{ctrl.lastcompets[5].img}}" alt="{{lc.user.entreprise}}" height="598"/>
+                <div class="information">
+                    <p>Déposé le : {{ctrl.lastcompets[5].dateDepot}}</p>
+                    <p>A rendre le : {{ctrl.lastcompets[5].dateFin}}</p>
+                    <p class="shortDesc">{{ctrl.lastcompets[5].description}}</p>
+                </div>
+            </div>
+        </div>
     </section>
 
 </section>

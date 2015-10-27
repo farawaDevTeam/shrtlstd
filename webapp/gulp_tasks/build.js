@@ -8,5 +8,5 @@ var argv = require('yargs').argv;
 
 gulp.task('build', ['jshint', 'test'], function(cb){
    console.log('NODE_ENV = ' + argv.NODE_ENV);
-   runSeq('clean', ['inject', 'images'], cb);
+   runSeq('clean', ['inject', 'images', 'fonts'], cb);
 });

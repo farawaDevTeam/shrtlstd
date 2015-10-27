@@ -1,160 +1,66 @@
 <section class="mainContent">
     <section class="identification">
-    	<nav>
+        <nav class="socialNetwork col-lg-6">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </nav>
+    	<nav class="connexion col-lg-6">
     		<a href="#"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> {{ctrl.identification.connection}}</a>
     		<a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ctrl.identification.creation}}</a>
     	</nav>
     </section>
 
     <header>
-    	<h1>SHRTLSTD</h1>
+    	<h1>SHRTLS <span>TD</span></h1>
     </header>
 
     <nav class="navigation">
     	<a href="#" class="here">Home</a>
-    	<a href="#">Les Compet'</a>
+    	<a href="#">Les Compèt'</a>
     	<a href="#">La communauté</a>
     	<a href="#">Les vidéos</a>
     	<a href="#">Qui sommes-nous ?</a>
     </nav>
 
     <section>
-    	<h2>Derniers compèt'</h2>
+    	<!-- <h2>Derniers compèt'</h2> -->
     	<div class="liste">
-    		<!-- <div class="lastcompets col-lg-3 col-md-3 col-xs-1" ng-repeat="lc in ctrl.lastcompets">
-    			<div class="mozaicCompet">
-    				<img ng-src="../../images/{{lc.img}}" alt="{{lc.user.entreprise}}" width="200" height="200" />
-    			</div>
-    			<div class="information">
-	    			<p>Déposé le : {{lc.dateDepot}}</p>
-	    			<p>A rendre le : {{lc.dateFin}}</p>
-	    			<p class="shortDesc">{{lc.description}}</p>
-	    		</div>
-	    		<div>
-	    			<h4>{{lc.user.entreprise}}</h4>
-	    			<p>{{lc.nom}}</p>
-	    		</div>
-    		</div> -->
-
-            <div class="compete col-lg-6">
-                <img ng-src="../../images/{{ctrl.lastcompets[0].img}}" alt="{{lc.user.entreprise}}" width="951" />
+    		<div class="compete col-sm-12 col-xs-12" ng-class="ctrl.getMosaic($index);" ng-repeat="lc in ctrl.lastcompets">
+                <img ng-src="../../images/{{lc.img}}" alt="{{lc.user.entreprise}}" height="598" />
                 
                 <div class="information">
-                    <p>Déposé le : {{ctrl.lastcompets[0].dateDepot}}</p>
-                    <p>A rendre le : {{ctrl.lastcompets[0].dateFin}}</p>
-                    <p class="shortDesc">{{ctrl.lastcompets[0].description}}</p>
-                </div>
-            </div>
-            <div class="compete col-lg-4">
-                <img ng-src="../../images/{{ctrl.lastcompets[1].img}}" alt="{{lc.user.entreprise}}" height="598"/>
-                <div class="information">
-                    <p>Déposé le : {{ctrl.lastcompets[1].dateDepot}}</p>
-                    <p>A rendre le : {{ctrl.lastcompets[1].dateFin}}</p>
-                    <p class="shortDesc">{{ctrl.lastcompets[1].description}}</p>
-                </div>
-            </div>
-            <div class="compete col-lg-2">
-                <img ng-src="../../images/{{ctrl.lastcompets[2].img}}" alt="{{lc.user.entreprise}}" height="598"/>
-                <div class="information">
-                    <p>Déposé le : {{ctrl.lastcompets[2].dateDepot}}</p>
-                    <p>A rendre le : {{ctrl.lastcompets[2].dateFin}}</p>
-                    <p class="shortDesc">{{ctrl.lastcompets[2].description}}</p>
-                </div>
-            </div>
+                    <h3>{{lc.user.entreprise}}</h3>
+                    <h4>{{lc.nom}}</h4>
+                    <p><span class="glyphicon glyphicon-send" aria-hidden="true"></span> {{lc.dateFin}}</p>
+                    <p class="shortDesc">{{lc.description}}[...]</p>
 
-            <div class="compete col-lg-3">
-                <img ng-src="../../images/{{ctrl.lastcompets[3].img}}" alt="{{lc.user.entreprise}}" height="598"/>
-                <div class="information">
-                    <p>Déposé le : {{ctrl.lastcompets[3].dateDepot}}</p>
-                    <p>A rendre le : {{ctrl.lastcompets[3].dateFin}}</p>
-                    <p class="shortDesc">{{ctrl.lastcompets[3].description}}</p>
-                </div>
-            </div>
-            <div class="compete col-lg-3">
-                <img ng-src="../../images/{{ctrl.lastcompets[4].img}}" alt="{{lc.user.entreprise}}" height="598"/>
-                <div class="information">
-                    <p>Déposé le : {{ctrl.lastcompets[4].dateDepot}}</p>
-                    <p>A rendre le : {{ctrl.lastcompets[4].dateFin}}</p>
-                    <p class="shortDesc">{{ctrl.lastcompets[4].description}}</p>
-                </div>
-            </div>
-            <div class="compete col-lg-6">
-                <img ng-src="../../images/{{ctrl.lastcompets[5].img}}" alt="{{lc.user.entreprise}}" height="598"/>
-                <div class="information">
-                    <p>Déposé le : {{ctrl.lastcompets[5].dateDepot}}</p>
-                    <p>A rendre le : {{ctrl.lastcompets[5].dateFin}}</p>
-                    <p class="shortDesc">{{ctrl.lastcompets[5].description}}</p>
+                    <p class="more"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></p>
                 </div>
             </div>
     	</div>
     </section>
     <hr>
+    <section class="cmtCaMarche">
+        <h2>Comment ça marche ?</h2><br>
+        <div class="howWorks">
+            <p class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </section>
+    <hr>
     <section>
     	<h2>Dernières vidéos</h2>
-        <div class="liste">
-            <!-- <div class="lastcompets col-lg-3 col-md-3 col-xs-1" ng-repeat="lc in ctrl.lastcompets">
-                <div class="mozaicCompet">
-                    <img ng-src="../../images/{{lc.img}}" alt="{{lc.user.entreprise}}" width="200" height="200" />
-                </div>
-                <div class="information">
-                    <p>Déposé le : {{lc.dateDepot}}</p>
-                    <p>A rendre le : {{lc.dateFin}}</p>
-                    <p class="shortDesc">{{lc.description}}</p>
-                </div>
-                <div>
-                    <h4>{{lc.user.entreprise}}</h4>
-                    <p>{{lc.nom}}</p>
-                </div>
-            </div> -->
-
-            <div class="compete col-lg-6">
-                <img ng-src="../../images/{{ctrl.lastcompets[0].img}}" alt="{{lc.user.entreprise}}" width="951" />
+        <div class="liste videos">
+            <div class="compete col-sm-12 col-xs-12" ng-class="ctrl.getMosaic($index);" ng-repeat="lc in ctrl.lastcompets">
+                <img ng-src="../../images/{{lc.img}}" alt="{{lc.user.entreprise}}" height="598" />
                 
                 <div class="information">
-                    <p>Déposé le : {{ctrl.lastcompets[0].dateDepot}}</p>
-                    <p>A rendre le : {{ctrl.lastcompets[0].dateFin}}</p>
-                    <p class="shortDesc">{{ctrl.lastcompets[0].description}}</p>
-                </div>
-            </div>
-            <div class="compete col-lg-4">
-                <img ng-src="../../images/{{ctrl.lastcompets[1].img}}" alt="{{lc.user.entreprise}}" height="598"/>
-                <div class="information">
-                    <p>Déposé le : {{ctrl.lastcompets[1].dateDepot}}</p>
-                    <p>A rendre le : {{ctrl.lastcompets[1].dateFin}}</p>
-                    <p class="shortDesc">{{ctrl.lastcompets[1].description}}</p>
-                </div>
-            </div>
-            <div class="compete col-lg-2">
-                <img ng-src="../../images/{{ctrl.lastcompets[2].img}}" alt="{{lc.user.entreprise}}" height="598"/>
-                <div class="information">
-                    <p>Déposé le : {{ctrl.lastcompets[2].dateDepot}}</p>
-                    <p>A rendre le : {{ctrl.lastcompets[2].dateFin}}</p>
-                    <p class="shortDesc">{{ctrl.lastcompets[2].description}}</p>
-                </div>
-            </div>
-
-            <div class="compete col-lg-3">
-                <img ng-src="../../images/{{ctrl.lastcompets[3].img}}" alt="{{lc.user.entreprise}}" height="598"/>
-                <div class="information">
-                    <p>Déposé le : {{ctrl.lastcompets[3].dateDepot}}</p>
-                    <p>A rendre le : {{ctrl.lastcompets[3].dateFin}}</p>
-                    <p class="shortDesc">{{ctrl.lastcompets[3].description}}</p>
-                </div>
-            </div>
-            <div class="compete col-lg-3">
-                <img ng-src="../../images/{{ctrl.lastcompets[4].img}}" alt="{{lc.user.entreprise}}" height="598"/>
-                <div class="information">
-                    <p>Déposé le : {{ctrl.lastcompets[4].dateDepot}}</p>
-                    <p>A rendre le : {{ctrl.lastcompets[4].dateFin}}</p>
-                    <p class="shortDesc">{{ctrl.lastcompets[4].description}}</p>
-                </div>
-            </div>
-            <div class="compete col-lg-6">
-                <img ng-src="../../images/{{ctrl.lastcompets[5].img}}" alt="{{lc.user.entreprise}}" height="598"/>
-                <div class="information">
-                    <p>Déposé le : {{ctrl.lastcompets[5].dateDepot}}</p>
-                    <p>A rendre le : {{ctrl.lastcompets[5].dateFin}}</p>
-                    <p class="shortDesc">{{ctrl.lastcompets[5].description}}</p>
+                    <p class="view"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></p>
+                    <p>Déposé le : {{lc.dateDepot}}</p>
                 </div>
             </div>
         </div>

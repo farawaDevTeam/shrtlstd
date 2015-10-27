@@ -14,16 +14,33 @@ angular.module('homeModule', [])
         	creation : 'Créer un compte'
         };
 
+        self.colSizeLgMd = {
+        	0: 6,
+        	1: 4,
+        	2: 2,
+        	3: 3,
+        	4: 6,
+        	5: 3
+        };
+
+        self.getMosaic = function(index){
+        	var divClass = {};
+        	divClass['col-lg-' + self.colSizeLgMd[index]] = true;
+        	divClass['col-md-' + self.colSizeLgMd[index]] = true;
+        	console.log(divClass);
+        	return divClass;
+        };
+
         self.lastcompets = [{
         	img : '1.jpg',
 			projetId: 'RYhPKITz',
-			nom: 'projet1',
+			nom: 'Refonde du logo',
 			fileName: null,
 			nbEquipeMax: 2,
 			nbUserByEquipe: 3,
 			dateDepot: '2015-10-26',
 			dateFin: '2015-12-25',
-			description: 'desc 1',
+			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
 			recompense: 'poste',
 			user: {
 				login: null,
@@ -44,13 +61,13 @@ angular.module('homeModule', [])
 		{
 			img : '2.jpg',
 			projetId: 'RYhPKITz',
-			nom: 'projet2',
+			nom: 'Campagne de pub Galaxy S6 Edge',
 			fileName: null,
 			nbEquipeMax: 2,
 			nbUserByEquipe: 3,
 			dateDepot: '2015-10-26',
 			dateFin: '2015-12-25',
-			description: 'desc 1',
+			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
 			recompense: 'poste',
 			user: {
 				login: null,
@@ -71,13 +88,13 @@ angular.module('homeModule', [])
 		{
 			img : '3.jpg',
 			projetId: 'RYhPKITz',
-			nom: 'projet2',
+			nom: 'Affiche publicitaire',
 			fileName: null,
 			nbEquipeMax: 2,
 			nbUserByEquipe: 3,
 			dateDepot: '2015-10-26',
 			dateFin: '2015-12-25',
-			description: 'desc 1',
+			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
 			recompense: 'poste',
 			user: {
 				login: null,
@@ -98,13 +115,13 @@ angular.module('homeModule', [])
 		{
 			img : '4.jpg',
 			projetId: 'RYhPKITz',
-			nom: 'projet2',
+			nom: 'Stratégie de communication',
 			fileName: null,
 			nbEquipeMax: 2,
 			nbUserByEquipe: 3,
 			dateDepot: '2015-10-26',
 			dateFin: '2015-12-25',
-			description: 'desc 1',
+			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
 			recompense: 'poste',
 			user: {
 				login: null,
@@ -123,15 +140,15 @@ angular.module('homeModule', [])
 			}
 		}, 
 		{
-			img : '5.jpg',
+			img : '1.jpg',
 			projetId: 'RYhPKITz',
-			nom: 'projet2',
+			nom: 'Vidéo',
 			fileName: null,
 			nbEquipeMax: 2,
 			nbUserByEquipe: 3,
 			dateDepot: '2015-10-26',
 			dateFin: '2015-12-25',
-			description: 'desc 1',
+			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
 			recompense: 'poste',
 			user: {
 				login: null,
@@ -150,15 +167,15 @@ angular.module('homeModule', [])
 			}
 		}, 
 		{
-			img : '1.jpg',
+			img : '5.jpg',
 			projetId: 'RYhPKITz',
-			nom: 'projet2',
+			nom: 'Powerpoint',
 			fileName: null,
 			nbEquipeMax: 2,
 			nbUserByEquipe: 3,
 			dateDepot: '2015-10-26',
 			dateFin: '2015-12-25',
-			description: 'desc 1',
+			description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
 			recompense: 'poste',
 			user: {
 				login: null,
@@ -171,60 +188,6 @@ angular.module('homeModule', [])
 				situationPro: null,
 				metier: null,
 				entreprise: 'H&M',
-				description: null,
-				sitePerso: null,
-				sitePro: ''
-			}
-		}, 
-		{
-			img : '2.jpg',
-			projetId: 'RYhPKITz',
-			nom: 'projet2',
-			fileName: null,
-			nbEquipeMax: 2,
-			nbUserByEquipe: 3,
-			dateDepot: '2015-10-26',
-			dateFin: '2015-12-25',
-			description: 'desc 1',
-			recompense: 'poste',
-			user: {
-				login: null,
-				userType: null,
-				roles: null,
-				pseudo: 'pro',
-				nom: 'pro',
-				prenom: '',
-				avatar: null,
-				situationPro: null,
-				metier: null,
-				entreprise: 'Mercedes',
-				description: null,
-				sitePerso: null,
-				sitePro: ''
-			}
-		}, 
-		{
-			img : '2.jpg',
-			projetId: 'RYhPKITz',
-			nom: 'projet2',
-			fileName: null,
-			nbEquipeMax: 2,
-			nbUserByEquipe: 3,
-			dateDepot: '2015-10-26',
-			dateFin: '2015-12-25',
-			description: 'desc 1',
-			recompense: 'poste',
-			user: {
-				login: null,
-				userType: null,
-				roles: null,
-				pseudo: 'pro',
-				nom: 'pro',
-				prenom: '',
-				avatar: null,
-				situationPro: null,
-				metier: null,
-				entreprise: 'Louis Vuitton',
 				description: null,
 				sitePerso: null,
 				sitePro: ''

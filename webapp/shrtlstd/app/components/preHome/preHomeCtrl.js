@@ -1,18 +1,22 @@
 
 angular.module('preHomeModule', [])
-	.controller('preHomeCtrl', function($window , $state){
-			'use strict';
+	.controller('preHomeCtrl', function ($window, $state, langService) {
+		'use strict';
 
-			var self = this;
+		var self = this;
 
-			self.goHome = function(){
-				$window.localStorage.hasAlreadyCome = true;
-				$state.go('home');
-			};
-
-			//MAIN
-			if($window.localStorage.hasAlreadyCome){
-				self.goHome();
-				return;
-			}
+		langService.getLabels(function (labels) {
+			self.labels = labels;
 		});
+
+		self.goHome = function () {
+			$window.localStorage.hasAlreadyCome = true;
+			$state.go('home');
+		};
+
+		//MAIN
+		if ($window.localStorage.hasAlreadyCome) {
+			self.goHome();
+			return;
+		}
+	});

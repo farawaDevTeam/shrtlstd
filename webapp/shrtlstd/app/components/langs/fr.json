@@ -2,5 +2,25 @@
 	"header": {
 		"connect": "Se connecter",
 		"signup": "Créer un compte"
+	},
+	"nav":{
+		"home": "Home",
+		"competition": "Les Compèt'",
+		"community": "La communauté",
+		"videos": "Les vidéos",
+		"about": "Qui sommes-nous ?"
+	},
+	"home":{
+		"howItWorks": "Comment ça marche ?",
+		"lastVideos": "Dernières vidéos",
+		"published": "Publiée le"
+	},
+	"prehome":{
+		"welcome": "bienvenue",
+		"go": "Se lancer"
+	},
+	"footer":{
+		"rights": "Tous droits réservés",
+		"made": "Un site web réalisé par"
 	}
 }

@@ -29,7 +29,8 @@ gulp.task('serve', ['build'], function() {
                 '**/*.html',
                 'components/**/*.scss',
                 'stylesheets/**/*.scss',
-                '**/*.js'
+                '**/*.js',
+                'components/langs/*.json'
             ],
             {
                 cwd: buildConfig.src
@@ -49,6 +50,7 @@ gulp.task('serve', ['build'], function() {
                 else if(_.endsWith(filePath, '.js')){
                     fileDestination += '/js';
                 }
+                
 
                 fileToBuild.pipe(gulp.dest(fileDestination))
                     .pipe(through2.obj(function (file, enc, cb){

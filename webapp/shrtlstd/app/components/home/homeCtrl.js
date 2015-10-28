@@ -7,7 +7,7 @@ angular.module('homeModule', [])
         'use strict';
         var self = this;
 
-		langService.getLabels('fr', function(labels){
+		langService.getLabels(function(labels){
 			self.labels = labels;
 		});
 

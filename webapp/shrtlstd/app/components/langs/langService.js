@@ -1,12 +1,11 @@
 angular.module('langModule', [])
-	.factory('langService', function($http){
+	.factory('langService', function($http, $window){
 		'use strict';
 		
 		var langFactory = {};
 		
-		langFactory.getLabels = function(langName, cb){
-			
-			if(!langName) return;
+		langFactory.getLabels = function(cb){
+			var langName = $window.sessionStorage.langName ? $window.sessionStorage.langName : navigator.language;
 			
 			if(!langFactory[langName]){
 			

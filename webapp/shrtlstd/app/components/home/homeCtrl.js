@@ -27,7 +27,6 @@ angular.module('homeModule', [])
         	var divClass = {};
         	divClass['col-lg-' + self.colSizeLgMd[index]] = true;
         	divClass['col-md-' + self.colSizeLgMd[index]] = true;
-        	console.log(divClass);
         	return divClass;
         };
 

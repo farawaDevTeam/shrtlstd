@@ -1,28 +1,30 @@
 <section class="mainContent">
     <section class="identification">
         <nav class="socialNetwork col-lg-6">
+            <span>Rejoignez-nous &nbsp;</span>
             <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
             <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
             <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
         </nav>
     	<nav class="connexion col-lg-6">
-    		<a href="#"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span> {{ctrl.identification.connection}}</a>
-    		<a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ctrl.identification.creation}}</a>
+    		<a href="#"><i class="fa fa-unlock"></i> {{ctrl.identification.connection}}</a>
+    		<a href="#"><i class="fa fa-user-plus"></i> {{ctrl.identification.creation}}</a>
     	</nav>
     </section>
 
     <header>
     	<h1>SHRTLS <span>TD</span></h1>
     </header>
-
-    <nav class="navigation">
-    	<a href="#" class="here">Home</a>
-    	<a href="#">Les Compèt'</a>
-    	<a href="#">La communauté</a>
-    	<a href="#">Les vidéos</a>
-    	<a href="#">Qui sommes-nous ?</a>
-    </nav>
-
+    <section class="navigation col-lg-12">
+        <div class="nav">
+        	<a href="#" class="here col-lg-2 col-md-2 col-sm-2">Home</a>
+        	<a href="#" class="col-lg-2 col-md-2 col-sm-2">Les compèt'</a>
+        	<a href="#" class="col-lg-2 col-md-2 col-sm-2">La communauté</a>
+        	<a href="#" class="col-lg-2 col-md-2 col-sm-2">Les vidéos</a>
+        	<a href="#" class="col-lg-2 col-md-2 col-sm-2">A propos</a>
+            <a href="#" class="col-lg-2 col-md-2 col-sm-2">Contact</a>
+        </div>
+    </section>
     <section>
     	<!-- <h2>Derniers compèt'</h2> -->
     	<div class="liste">
@@ -44,11 +46,26 @@
     <section class="cmtCaMarche">
         <h2>Comment ça marche ?</h2><br>
         <div class="howWorks">
-            <p class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <h3><i class="fa fa-thumbs-o-up"></i> Une compétence</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
 
-            <p class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <h3><i class="fa fa-file-image-o"></i> Un projet</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+            </div>
 
-            <p class="col-lg-4 col-md-4 col-sm-12 col-xs-12"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <h3><i class="fa fa-users"></i> Une team</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                <iframe src="https://www.youtube.com/embed/NN1jB5UZ650" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <h3><i class="fa fa-trophy"></i> ... the winner is</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
+            </div>
         </div>
     </section>
     <hr>
@@ -60,10 +77,13 @@
                 
                 <div class="information">
                     <p class="view"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></p>
-                    <p>Déposé le : {{lc.dateDepot}}</p>
+                    <p><span class="glyphicon glyphicon-send" aria-hidden="true"></span> publiée le : {{lc.dateDepot}}</p>
                 </div>
             </div>
         </div>
     </section>
+    <footer>
+        <p class="copy col-lg-3 col-lg-offset-5 col-md-8 col-md-offset-3 col-sm-9 col-sm-offset-2"><span>&copy; 2015 ShortListed</span>. Tous droits réservés. Un site web réalisé par <a href="#">DigitalF</a></p>
+    </footer>
 
 </section>

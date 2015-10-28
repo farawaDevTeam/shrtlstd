@@ -1,14 +1,12 @@
+/*
+	PROFIL BANNER
+					*/
 .identification{
 	font-size: 25px;
 	overflow: hidden;
+	padding: 5px 0;
 }
-.identification nav.connexion, .identification nav.socialNetwork{
-	font-size: 25px;
-}
-.identification nav.connexion{
-	text-align: right;
-} 
-.identification nav.socialNetwork{
+.identification nav{
 	text-align: center;
 }
 .identification nav.socialNetwork a:hover{
@@ -20,8 +18,12 @@
 .identification nav.socialNetwork .linkedin{
 	color:#0177B5;
 }
-.identification a{
+.identification nav.socialNetwork .facebook{
+	color:#3A5795;
+}
+.identification nav a{
 	margin-right:20px;
+	color : #322f3a;
 }
 .identification a:visited {
 	color : #322f3a;
@@ -30,35 +32,46 @@
 	text-decoration: none;
 	color: #99d5cb;
 }
-.identification a:hover span{
+.identification a:hover i{
 	color :#d1b816;
 }
-nav.navigation{
-	padding: 35px 0 0 0;
-  	text-align: center;
-  	font-size: 30px;
-  	background-color: rgba(0,0,0,0.5);
-  	color :#fff;
-}
-nav.navigation a {
-	color : #fff;
-	margin: 0 35px;
-	text-transform: uppercase;
-}
-nav.navigation a:hover{
-	text-decoration: none;
-}
-nav.navigation a.here, nav.navigation a:hover{
-	background-color: #99d5cb;
-	padding : 10px;
-	border-bottom : solid 3px #d1b816;
-}/*#B88491*/
+
+/*
+	HEADER AVEC LOGO 
+						*/
 header{
 	text-align:center;
-	background-color: rgba(0,0,0,0.5);
+	background-color: #322f3a;
 	color:#fff;
-	padding-top: 25px;
+	padding: 25px 0 15px;
 }
+
+/*
+	NAVIGATION 
+				*/
+section.navigation{
+	overflow: hidden;
+	text-align: center;
+  	font-size: 30px;
+  	background-color:#322f3a;
+  	color :#fff;
+}
+section.navigation a {
+	color : #fff;
+	text-transform: uppercase;
+}
+section.navigation a:hover{
+	text-decoration: none;
+}
+section.navigation a.here, section.navigation a:hover{
+	background-color: #99d5cb;
+	border-bottom : solid 3px #d1b816;
+}/*#B88491*/
+
+
+/*
+	MOZAIC
+			*/
 .liste{
 	width: 100%;
 	overflow: hidden;
@@ -100,30 +113,54 @@ header{
 	font-size: 55px;
 	margin-top : 50px;
 }
+
+/*
+	COMMENT CA MARCHE 
+						*/
 .cmtCaMarche{
 	padding : 25px;
 }
 .howWorks{
 	overflow: hidden;
 }
-.howWorks span{
-	font-size: 30px;
-	color : #99d5cb;
+.howWorks h3{
+	text-align: center;
 }
-.howWorks p:hover span{
+.howWorks i{
 	color : #d1b816;
 }
+.howWorks div:hover h3{
+	color : #99d5cb;
+}
+
+.howWorks p{
+	padding : 15px 0;
+}
+
+.howWorks iframe{
+	width: 100%;
+}
+
+
+/*
+	MOZAIC VIDEOS
+					*/
 .liste.videos .information{
 	display: block;
 }
-.liste.videos .information p.view{
+/*.liste.videos .information p.view{
 	display :none;
-}
-.liste.videos .information:hover p.view{
-	display: block;
-}
+}*/
 p.view{
-	font-size: 30px;
-	margin-bottom : 45px;
-	color: #99d5cb;
+	font-size: 55px;
+	margin : 130px 0 45px;
 }
+
+.liste.videos .information:hover p.view{
+	-webkit-animation:spin 1s linear infinite;
+    -moz-animation:spin 1s linear infinite;
+    animation:spin 1s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

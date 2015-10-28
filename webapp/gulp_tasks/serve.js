@@ -52,13 +52,13 @@ gulp.task('serve', ['build'], function() {
 
                 fileToBuild.pipe(gulp.dest(fileDestination))
                     .pipe(through2.obj(function (file, enc, cb){
-                        if(_.endsWith(filePath, 'index.html')){
+                        // if(_.endsWith(filePath, 'index.html')){
                             return injectFiles(function(){
                                 cb(null, file);
 
                             });
-                        }
-                        cb(null, file);
+                        // }
+                        // cb(null, file);
                     }))
                     .pipe(reload());
             });

@@ -27,7 +27,7 @@ gulp.task('js', ['js-libs'], function(){
 });
 
 gulp.task('js-libs', function(){
-    var libs = require('../' + component + '/libs.json').libs;
+    var libs = require('../' + component + '/dependencies.json').libs;
 
     var libsSrc = [];
 

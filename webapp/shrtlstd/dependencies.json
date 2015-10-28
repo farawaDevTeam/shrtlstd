@@ -1,0 +1,12 @@
+{
+  "libs": [
+    "angular/angular",
+    "angular-ui-router/release/angular-ui-router",
+    "jquery/dist/jquery",
+    "ng-dialog/js/ngDialog"
+  ],
+  "css":[
+    "ng-dialog/css/ngDialog",
+    "ng-dialog/css/ngDialog-theme-default"
+  ]
+}

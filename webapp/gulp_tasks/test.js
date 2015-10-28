@@ -9,7 +9,7 @@ var karma = require('gulp-karma');
 gulp.task('test', function(cb){
 
     var component = process.env.INIT_CWD.split((__dirname.split('gulp_tasks')[0]))[1];
-    var libs = require('../' + component + '/libs.json').libs;
+    var libs = require('../' + component + '/dependencies.json').libs;
 
     var js = [];
 

@@ -1,7 +1,0 @@
-{
-  "libs": [
-    "angular/angular",
-    "angular-ui-router/release/angular-ui-router",
-    "jquery/dist/jquery"
-  ]
-}

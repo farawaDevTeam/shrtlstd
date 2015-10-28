@@ -12,22 +12,31 @@ var component = process.env.INIT_CWD.split((__dirname.split('gulp_tasks')[0]))[1
 var distFolder = __dirname + '/../../dist/' + component;
 var autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('css', function(){
+gulp.task('css', ['trueCss'], function () {
 
     var env = argv.NODE_ENV | 'dev';
 
     return gulp.src([
-    		buildConfig.src + '/stylesheets/**/*.scss',
-    		buildConfig.src + '/components/**/*.scss'
-    	])
+        buildConfig.src + '/stylesheets/**/*.scss',
+        buildConfig.src + '/components/**/*.scss'
+    ])
         .pipe(sass())
         .pipe(autoprefixer())
         .pipe(gulpif(env === 'prod', concat('main.css')))
         .pipe(gulp.dest(distFolder + '/stylesheets'));
 });
 
-gulp.task('trueCss', function(){
-	return gulp.src([buildConfig.src + '/../../../node_modules/bootstrap/dist/css/bootstrap.css'])
-	.pipe(gulp.dest(distFolder + '/stylesheets'))
+gulp.task('trueCss', function () {
+
+    var css = require('../' + component + '/dependencies.json').css;
+
+    var cssSrc = [];
+
+    css.forEach(function (css) {
+        cssSrc.push(__dirname + '/../../node_modules/' + css + '.css');
+    });
+
+    return gulp.src(cssSrc)
+        .pipe(gulp.dest(distFolder + '/stylesheets'))
 
 });

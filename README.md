@@ -9,4 +9,4 @@
 gulp task --var value
 
 #### Web App Project
-Create a libs.json at the current webapp's root to reference the dependencies
+Create a dependencies.json at the current webapp's root to reference the dependencies

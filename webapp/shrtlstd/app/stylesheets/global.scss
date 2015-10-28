@@ -58,3 +58,22 @@ h1 span{
 .copy{
 	font-size : 20px;
 }
+
+.ngdialog.ngdialog-theme-default .ngdialog-content{
+	width: 700px!important;
+}
+
+// ATOMIC - CSS
+
+// DISPLAY
+.iBlock{display: inline-block;}
+
+// MARGIN
+.mt1{margin-top: 1em;}
+
+// TEXT
+.txt-justify{text-align: justify;}
+.underline{text-decoration: underline;}
+
+// WIDTH
+.wFull{width: 100%;}

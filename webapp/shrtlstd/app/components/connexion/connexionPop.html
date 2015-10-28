@@ -1,5 +1,13 @@
-<section class="mainContent" ng-controller="connexionCtrl as ctrl">
-	<label></label><input ng-model="ctrl.credentials.login"/>
+<section class="mainContent iBlock wFull connexion" ng-controller="connexionCtrl as ctrl">
+	
+	<h4>{{ctrl.labels.connexion.title}}</h4>
+	<section class="col-lg-6 connexion-form mt1">
+		<p class="underline">{{ctrl.labels.connexion.withShrtlstd}}</p>
+		<label class="col-lg-6">login</label>
+	</section>
+	<span class="col-lg-1">{{ctrl.labels.connexion.or}}</span>
+	<section class="col-lg-5">qsdqsdqsw</section>
+	<!--<label></label><input ng-model="ctrl.credentials.login"/>
 	<label></label><input type="password" ng-model="ctrl.credentials.pwd"/>
-	<a href="#" pop-up tpl="components/connexion/connexionPop">toto</a>
+	<a href="#" pop-up tpl="components/connexion/connexionPop">toto</a>-->
 </section>

@@ -28,5 +28,11 @@
 	"footer":{
 		"rights": "Tous droits réservés",
 		"made": "Un site web réalisé par"
+	},
+	"connexion":{
+		"title": "Connexion",
+		"withShrtlstd": "Avec votre compte SHRTLSTD",
+		"or": "ou",
+		"withAccount": "Avec"
 	}
 }

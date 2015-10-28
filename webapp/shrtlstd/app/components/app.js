@@ -9,7 +9,8 @@
         'preHomeModule', 
         'homeModule',
         'popUpModule',
-        'connexionModule'
+        'connexionModule',
+        'langModule'
         ])
  .config(function($stateProvider, $urlRouterProvider){
     'use strict';

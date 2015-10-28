@@ -7,6 +7,7 @@ angular.module('popUpModule', [])
 			link: function(scope, el, attr){
 				
 				el.bind('click', function(){
+					ngDialog.close();
 					ngDialog.open({ 
 						template: attr.tpl + '.html' 
 					});

@@ -3,16 +3,13 @@
  */
 
 angular.module('homeModule', [])
-    .controller('homeCtrl', function($http){
+    .controller('homeCtrl', function($http, langService){
         'use strict';
         var self = this;
 
-        self.message = 'toto';
-
-        self.identification = {
-        	connection : 'Se connecter',
-        	creation : 'Créer un compte'
-        };
+		langService.getLabels('fr', function(labels){
+			self.labels = labels;
+		});
 
         self.colSizeLgMd = {
         	0: 6,

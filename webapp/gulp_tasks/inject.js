@@ -7,7 +7,7 @@ var inject = require('gulp-inject');
 var component = process.env.INIT_CWD.split((__dirname.split('gulp_tasks')[0]))[1];
 var distFolder = __dirname + '/../../dist/' + component;
 
-gulp.task('inject', ['html', 'css', 'js'], function(){
+gulp.task('inject', ['copy', 'css', 'js'], function(){
     injectFiles();
 });
 

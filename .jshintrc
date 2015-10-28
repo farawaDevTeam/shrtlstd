@@ -15,7 +15,8 @@
   "strict"        : true,
   "predef"        : [
     "console",
-    "angular"
+    "angular",
+    "navigator"
   ]
 
 }

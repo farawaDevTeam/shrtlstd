@@ -1,19 +1,25 @@
 {
 	"header": {
 		"connect": "Se connecter",
-		"signup": "Créer un compte"
+		"signup": "Créer un compte",
+		"joinus": "Rejoignez-nous"
 	},
 	"nav":{
 		"home": "Home",
 		"competition": "Les Compèt'",
 		"community": "La communauté",
 		"videos": "Les vidéos",
-		"about": "Qui sommes-nous ?"
+		"about": "A propos",
+		"contact": "Contact"
 	},
 	"home":{
 		"howItWorks": "Comment ça marche ?",
 		"lastVideos": "Dernières vidéos",
-		"published": "Publiée le"
+		"published": "Publiée le",
+		"skill": "Une compétence",
+		"project": "Un projet",
+		"team": "Une team",
+		"winner": "... the winner is"
 	},
 	"prehome":{
 		"welcome": "bienvenue",

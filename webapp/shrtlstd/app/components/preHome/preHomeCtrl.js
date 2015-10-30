@@ -1,6 +1,6 @@
 
 angular.module('preHomeModule', [])
-	.controller('preHomeCtrl', function ($window, $state, langService) {
+	.controller('preHomeCtrl', function ($window, $state, langService, $timeout) {
 		'use strict';
 
 		var self = this;
@@ -11,7 +11,8 @@ angular.module('preHomeModule', [])
 
 		self.goHome = function () {
 			$window.localStorage.hasAlreadyCome = true;
-			$state.go('home');
+			self.boolSlideUp = true;
+			$timeout(function() {$state.go('home');}, 1000);
 		};
 
 		//MAIN

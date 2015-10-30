@@ -21,7 +21,7 @@ gulp.task('css', ['trueCss'], function () {
         buildConfig.src + '/components/**/*.scss'
     ])
         .pipe(sass())
-        .pipe(autoprefixer())
+        .pipe(autoprefixer({}))
         .pipe(gulpif(env === 'prod', concat('main.css')))
         .pipe(gulp.dest(distFolder + '/stylesheets'));
 });

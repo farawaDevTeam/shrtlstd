@@ -33,6 +33,13 @@
 		"title": "Connexion",
 		"withShrtlstd": "Avec votre compte SHRTLSTD",
 		"or": "ou",
-		"withAccount": "Avec"
+		"withAccount": "Avec",
+		"login": "Login",
+		"password": "Mot de passe",
+		"forgottenPwd": "Mot de passe oublié",
+		"rememberMe": "Se souvenir de moi",
+		"notMember": "Pas encore membre ?",
+		"signup": "Inscrivez-vous gratuitement",
+		"connect": "Connexion"
 	}
 }

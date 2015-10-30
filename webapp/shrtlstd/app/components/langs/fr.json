@@ -28,5 +28,18 @@
 	"footer":{
 		"rights": "Tous droits réservés",
 		"made": "Un site web réalisé par"
+	},
+	"connexion":{
+		"title": "Connexion",
+		"withShrtlstd": "Avec votre compte SHRTLSTD",
+		"or": "ou",
+		"withAccount": "Avec",
+		"login": "Login",
+		"password": "Mot de passe",
+		"forgottenPwd": "Mot de passe oublié",
+		"rememberMe": "Se souvenir de moi",
+		"notMember": "Pas encore membre ?",
+		"signUp": "Inscrivez-vous gratuitement",
+		"connect": "Connexion"
 	}
 }

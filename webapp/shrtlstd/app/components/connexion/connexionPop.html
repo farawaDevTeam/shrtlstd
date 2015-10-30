@@ -13,15 +13,18 @@
 				<label class="col-lg-4">{{ctrl.labels.connexion.password}} :</label>
 				<input class="col-lg-7" type="password" ng-model="ctrl.credentials.pwd"/>
 			</p>
-			<section class="col-lg-offset-3 col-lg-7 ftNormal tt1-5">
-				<a href="#">{{ctrl.labels.connexion.forgottenPwd}}</a>
+			<section class="col-lg-offset-3 col-lg-9 ftNormal tt1-5 txt-center">
+					<a href="#">{{ctrl.labels.connexion.forgottenPwd}}</a>
+					
+					<p>
+						<input type="checkbox"/>
+						<label>{{ctrl.labels.connexion.rememberMe}}</label>
+					</p>
 				
-				<p>
-					<input type="checkbox"/>
-					<label>{{ctrl.labels.connexion.rememberMe}}</label>
-				</p>
+				<input type="button" class="btn btn-primary mb1" value="{{ctrl.labels.connexion.connect}}"/>
 				
-				<input type="button" class="" value="{{ctrl.labels.connexion.connect}}"/>
+				<p class="mb0">{{ctrl.labels.connexion.notMember}}</p>
+				<a href="#" pop-up tpl="components/signUp/signUpPop">{{ctrl.labels.connexion.signUp}}</a>
 			</section>
 		</section>
 		

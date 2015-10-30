@@ -12,7 +12,7 @@ angular.module('preHomeModule', [])
 		self.goHome = function () {
 			$window.localStorage.hasAlreadyCome = true;
 			self.boolSlideUp = true;
-			$timeout(function() {$state.go('home');}, 1000);
+			$timeout(function() {$state.go('home');}, 500);
 		};
 
 		//MAIN

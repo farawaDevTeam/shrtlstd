@@ -1,3 +1,27 @@
+header, .identification, .navigation, #secHeader{
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+}
+.identication, .navigation{
+	height: 45px;
+}
+header, #secHeader{
+	height: 139px;
+	top: 45px;
+}
+#secHeader header{
+	top: 0;
+}
+#secHeader .secNav{
+	height: 125px;
+}
+
+.navigation{
+	top:184px;
+}
+
+
 /*
 	PROFIL BANNER
 					*/
@@ -5,6 +29,9 @@
 	font-size: 25px;
 	overflow: hidden;
 	padding: 5px 0;
+	top:0;
+
+	background-color: #fff;
 }
 .identification nav{
 	text-align: center;
@@ -49,25 +76,30 @@ header{
 /*
 	NAVIGATION 
 				*/
-section.navigation{
+section.navigation, #secHeader section.secNav{
 	overflow: hidden;
 	text-align: center;
   	font-size: 30px;
   	background-color:#322f3a;
   	color :#fff;
 }
-section.navigation a {
+section.navigation a, #secHeader section.secNav a{
 	color : #fff;
 	text-transform: uppercase;
 }
-section.navigation a:hover{
+section.navigation a:hover, #secHeader section.secNav a:hover{
 	text-decoration: none;
 }
-section.navigation a.here, section.navigation a:hover{
+section.navigation a.here, section.navigation a:hover, #secHeader section.secNav a.here, #secHeader section.secNav a:hover{
 	background-color: #99d5cb;
 	border-bottom : solid 3px #d1b816;
 }/*#B88491*/
 
+
+.primaryContent{
+	position:relative;
+	top:229px;
+}
 
 /*
 	MOZAIC
@@ -162,4 +194,46 @@ p.view{
     animation:spin 1s linear infinite;
 }
 
-@keyframes spin { 100% {transform:rotate(360deg); } }
+@keyframes spin { 100% { transform:rotate(360deg); } }
+
+
+/*
+	GESTION DE L'ANIMATION DU HEADER LORS DU SCROLL
+													*/
+#secHeader{
+    overflow: hidden;
+    height: 125px;
+   visibility: hidden;
+}
+
+.min #secHeader{
+	visibility: visible;
+  	opacity: 1;
+  	transition: opacity 2s linear;
+}
+
+.min header h1{
+	font-size: 70px;
+	-webkit-animation:example 1s linear;
+    -moz-animation:example 1s linear;
+    animation:example 1s linear;
+}
+@keyframes example {
+    0%   {font-size: 90px;}
+    25%  {font-size: 85px;}
+    50%  {font-size: 80px;}
+    75%  {font-size: 75px;}
+    100% {font-size: 70px;}
+}
+
+.primHeader{
+	visibility: visible;
+  	opacity: 1;
+  	transition: opacity 2s linear;
+}
+
+.min .primHeader{
+	visibility: hidden;
+  	opacity: 0;
+  	transition: visibility 0s 0.3s, opacity 0.3s linear;
+}

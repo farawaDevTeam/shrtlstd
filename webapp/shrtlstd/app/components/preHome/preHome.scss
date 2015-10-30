@@ -7,6 +7,8 @@
 }
 
 .welcome {
+	overflow: hidden;
+	padding-top: 15px;
 	position: absolute;
   	top: 50%;
   	left: 50%;
@@ -31,4 +33,10 @@ button.btn-primary{
 button.btn-primary:hover{
 	background-color: #d1b816;
 	border-color :#99d5cb;
+}
+
+.slideUp, .slideUp .welcome, .slideUp .copyright{
+  	height: 0;
+  	padding: 0; 
+  	transition: height 0.5s linear, padding 0.1s linear;
 }

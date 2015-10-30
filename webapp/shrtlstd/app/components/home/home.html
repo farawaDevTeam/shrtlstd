@@ -1,4 +1,4 @@
-<section class="mainContent">
+<section scroll class="mainContent" ng-class="{min:boolChangeClass}">
     <section class="identification">
         <nav class="socialNetwork col-lg-6">
             <span>{{ctrl.labels.header.joinus}} &nbsp;</span>
@@ -13,11 +13,11 @@
     	</nav>
     </section>
 
-    <header>
+    <header class="primHeader">
     	<h1>SHRTLS <span>TD</span></h1>
     </header>
     
-    <section class="navigation col-lg-12">
+    <section class="navigation col-lg-12 primHeader">
         <div class="nav">
         	<a href="#" class="here col-lg-2 col-md-2 col-sm-2">{{ctrl.labels.nav.home}}</a>
         	<a href="#" class="col-lg-2 col-md-2 col-sm-2">{{ctrl.labels.nav.competition}}</a>
@@ -27,66 +27,85 @@
             <a href="#" class="col-lg-2 col-md-2 col-sm-2">{{ctrl.labels.nav.contact}}</a>
         </div>
     </section>
-    <section>
-    	<!-- <h2>Derniers compèt'</h2> -->
-    	<div class="liste">
-    		<div class="compete col-sm-12 col-xs-12" ng-class="ctrl.getMosaic($index);" ng-repeat="lc in ctrl.lastcompets">
-                <img ng-src="../../images/{{lc.img}}" alt="{{lc.user.entreprise}}" height="598" />
-                
-                <div class="information">
-                    <h3>{{lc.user.entreprise}}</h3>
-                    <h4>{{lc.nom}}</h4>
-                    <p><span class="glyphicon glyphicon-send" aria-hidden="true"></span> {{lc.dateFin}}</p>
-                    <p class="shortDesc">{{lc.description}}[...]</p>
 
-                    <p class="more"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></p>
+    <section id="secHeader">
+        <header class="col-lg-3 col-md-3 col-sm-3">
+            <h1>SHRTLS <span>TD</span></h1>
+        </header>
+        
+        <section class="secNav col-lg-9 col-md-9 col-sm-9">
+            <div class="nav">
+                <a href="#" class="here col-lg-2 col-md-2 col-sm-2">{{ctrl.labels.nav.home}}</a>
+                <a href="#" class="col-lg-2 col-md-2 col-sm-2">{{ctrl.labels.nav.competition}}</a>
+                <a href="#" class="col-lg-2 col-md-2 col-sm-2">{{ctrl.labels.nav.community}}</a>
+                <a href="#" class="col-lg-2 col-md-2 col-sm-2">{{ctrl.labels.nav.videos}}</a>
+                <a href="#" class="col-lg-2 col-md-2 col-sm-2">{{ctrl.labels.nav.about}}</a>
+                <a href="#" class="col-lg-2 col-md-2 col-sm-2">{{ctrl.labels.nav.contact}}</a>
+            </div>
+        </section>
+    </section>
+
+    <div class="primaryContent">
+        <section>
+        	<!-- <h2>Derniers compèt'</h2> -->
+        	<div class="liste">
+        		<div class="compete col-sm-12 col-xs-12" ng-class="ctrl.getMosaic($index);" ng-repeat="lc in ctrl.lastcompets">
+                    <img ng-src="../../images/{{lc.img}}" alt="{{lc.user.entreprise}}" height="598" />
+                    
+                    <div class="information">
+                        <h3>{{lc.user.entreprise}}</h3>
+                        <h4>{{lc.nom}}</h4>
+                        <p><span class="glyphicon glyphicon-send" aria-hidden="true"></span> {{lc.dateFin}}</p>
+                        <p class="shortDesc">{{lc.description}}[...]</p>
+
+                        <p class="more"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></p>
+                    </div>
+                </div>
+        	</div>
+        </section>
+        <hr>
+        <section class="cmtCaMarche">
+            <h2>{{ctrl.labels.home.howItWorks}}</h2><br>
+            <div class="howWorks">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <h3><i class="fa fa-thumbs-o-up"></i> {{ctrl.labels.home.skill}}</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <h3><i class="fa fa-file-image-o"></i> {{ctrl.labels.home.project}}</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <h3><i class="fa fa-users"></i> {{ctrl.labels.home.team}}</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                    <iframe src="https://www.youtube.com/embed/NN1jB5UZ650" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <h3><i class="fa fa-trophy"></i> {{ctrl.labels.home.winner}}</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
                 </div>
             </div>
-    	</div>
-    </section>
-    <hr>
-    <section class="cmtCaMarche">
-        <h2>{{ctrl.labels.home.howItWorks}}</h2><br>
-        <div class="howWorks">
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <h3><i class="fa fa-thumbs-o-up"></i> {{ctrl.labels.home.skill}}</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
+        </section>
+        <hr>
+        <section>
+        	<h2>{{ctrl.labels.home.lastVideos}}</h2>
+            <div class="liste videos">
+                <div class="compete col-sm-12 col-xs-12" ng-class="ctrl.getMosaic($index);" ng-repeat="lc in ctrl.lastcompets">
+                    <img ng-src="../../images/{{lc.img}}" alt="{{lc.user.entreprise}}" height="598" />
+                    
+                    <div class="information">
+                        <p class="view"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></p>
+                        <p><span class="glyphicon glyphicon-send" aria-hidden="true"></span> {{ctrl.labels.home.published}} : {{lc.dateDepot}}</p>
 
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <h3><i class="fa fa-file-image-o"></i> {{ctrl.labels.home.project}}</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
-            </div>
-
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <h3><i class="fa fa-users"></i> {{ctrl.labels.home.team}}</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                <iframe src="https://www.youtube.com/embed/NN1jB5UZ650" frameborder="0" allowfullscreen></iframe>
-            </div>
-
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <h3><i class="fa fa-trophy"></i> {{ctrl.labels.home.winner}}</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
-            </div>
-        </div>
-    </section>
-    <hr>
-    <section>
-    	<h2>{{ctrl.labels.home.lastVideos}}</h2>
-        <div class="liste videos">
-            <div class="compete col-sm-12 col-xs-12" ng-class="ctrl.getMosaic($index);" ng-repeat="lc in ctrl.lastcompets">
-                <img ng-src="../../images/{{lc.img}}" alt="{{lc.user.entreprise}}" height="598" />
-                
-                <div class="information">
-                    <p class="view"><span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span></p>
-                    <p><span class="glyphicon glyphicon-send" aria-hidden="true"></span> {{ctrl.labels.home.published}} : {{lc.dateDepot}}</p>
-
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <footer>
-        <p class="copy col-lg-3 col-lg-offset-5 col-md-8 col-md-offset-3 col-sm-9 col-sm-offset-2"><span>&copy; 2015 ShortListed</span>. {{ctrl.labels.footer.rights}}. {{ctrl.labels.footer.made}} <a href="#">DigitalF</a></p>
-    </footer>
-
+        </section>
+        <footer>
+            <p class="copy col-lg-3 col-lg-offset-5 col-md-8 col-md-offset-3 col-sm-9 col-sm-offset-2"><span>&copy; 2015 ShortListed</span>. {{ctrl.labels.footer.rights}}. {{ctrl.labels.footer.made}} <a href="#">DigitalF</a></p>
+        </footer>
+    </div>
 </section>

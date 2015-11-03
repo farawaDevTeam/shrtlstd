@@ -43,7 +43,10 @@ gulp.task('serve', ['build'], function() {
                 //Case it is stylesheet
                 if(_.endsWith(filePath, '.scss')){
                     fileToBuild = gulp.src(filePath, {base: buildConfig.src + '/components'});
-                    fileToBuild = fileToBuild.pipe(sass());
+                    fileToBuild = fileToBuild.pipe(sass())
+                        .on('error', function(e){
+                            console.log(e);
+                        });
                     fileDestination += '/stylesheets';
                 }
                 //Case it is js

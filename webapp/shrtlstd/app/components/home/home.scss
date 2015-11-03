@@ -1,3 +1,5 @@
+@import '../../stylesheets/constants';
+
 header, .identification, .navigation, #secHeader{
 	position: fixed;
 	width: 100%;
@@ -37,7 +39,7 @@ header, #secHeader{
 	text-align: center;
 }
 .identification nav.socialNetwork a:hover{
-	color : #d1b816;
+	color : $mainYellow;
 }
 .identification nav.socialNetwork .twitter{
 	color : #55acee;
@@ -50,17 +52,17 @@ header, #secHeader{
 }
 .identification nav a{
 	margin-right:20px;
-	color : #322f3a;
+	color : $mainColor;
 }
 .identification a:visited {
-	color : #322f3a;
+	color : $mainColor;
 }
 .identification a:hover{
 	text-decoration: none;
-	color: #99d5cb;
+	color: $mainBlue;
 }
 .identification a:hover i{
-	color :#d1b816;
+	color :$mainYellow;
 }
 
 /*
@@ -68,7 +70,7 @@ header, #secHeader{
 						*/
 header{
 	text-align:center;
-	background-color: #322f3a;
+	background-color: $mainColor;
 	color:#fff;
 	padding: 25px 0 15px;
 }
@@ -80,7 +82,7 @@ section.navigation, #secHeader section.secNav{
 	overflow: hidden;
 	text-align: center;
   	font-size: 30px;
-  	background-color:#322f3a;
+  	background-color:$mainColor;
   	color :#fff;
 }
 section.navigation a, #secHeader section.secNav a{
@@ -91,8 +93,8 @@ section.navigation a:hover, #secHeader section.secNav a:hover{
 	text-decoration: none;
 }
 section.navigation a.here, section.navigation a:hover, #secHeader section.secNav a.here, #secHeader section.secNav a:hover{
-	background-color: #99d5cb;
-	border-bottom : solid 3px #d1b816;
+	background-color: $mainBlue;
+	border-bottom : solid 3px $mainYellow;
 }/*#B88491*/
 
 
@@ -130,7 +132,7 @@ section.navigation a.here, section.navigation a:hover, #secHeader section.secNav
 }
 .information h3{
 	text-transform: uppercase;
-	color: #d1b816;
+	color: $mainYellow;
 }
 .information h3, .information h4{
 	font-weight: bold;
@@ -159,10 +161,10 @@ section.navigation a.here, section.navigation a:hover, #secHeader section.secNav
 	text-align: center;
 }
 .howWorks i{
-	color : #d1b816;
+	color : $mainYellow;
 }
 .howWorks div:hover h3{
-	color : #99d5cb;
+	color : $mainBlue;
 }
 
 .howWorks p{

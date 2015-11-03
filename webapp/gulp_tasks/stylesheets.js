@@ -18,6 +18,7 @@ gulp.task('css', ['trueCss'], function () {
 
     return gulp.src([
         buildConfig.src + '/stylesheets/**/*.scss',
+        '!' + buildConfig.src + '/stylesheets/**/constants.scss',
         buildConfig.src + '/components/**/*.scss'
     ])
         .pipe(sass())

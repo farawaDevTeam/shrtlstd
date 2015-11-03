@@ -1,5 +1,4 @@
-$mainColor: #322f3a;
-
+@import 'constants';
 
 *{
   margin: 0;
@@ -43,9 +42,9 @@ h4{
 }
 
 h1 span{
-	border: solid 3px #d1b816;
+	border: solid 3px $mainYellow;
 	padding: 10px;
-	color : #99d5cb;
+	color : $mainBlue;
 }
 
 .copyright {
@@ -55,7 +54,7 @@ h1 span{
 }
 
 .copyright span, .copy span {
-	color : #d1b816;
+	color : $mainYellow;
 }
 
 .copy{
@@ -64,9 +63,24 @@ h1 span{
 
 .ngdialog.ngdialog-theme-default .ngdialog-content{
 	width: 700px!important;
+	background-color: white!important;
 }
 
+.ngdialog-overlay{background: rgba(50, 47, 58, 0.5)!important;}
+
 label{font-weight: normal;}
+
+.errors{
+	color: $redWarning;
+	font-size: 1.1rem;
+	margin-left: 0.5rem;
+}
+
+.ng-submitted input.ng-invalid {
+	border-color: $redWarning;
+}
+
+input:focus{border-color: $mainBlue!important;}
 
 // ATOMIC - CSS
 
@@ -77,12 +91,14 @@ label{font-weight: normal;}
  }
 
 // DISPLAY
+.block{display: block;}
 .iBlock{display: inline-block;}
 
 //FONT
 .ftNormal{font-family : "Helvetica Neue", Helvetica, Arial, sans-serif;}
 
 // FONT-SIZE
+.tt1-2{font-size: 1.2rem;}
 .tt1-5{font-size: 1.5rem;}
 .tt2{font-size: 2rem;}
 
@@ -91,6 +107,7 @@ label{font-weight: normal;}
 .mb1{margin-bottom: 1rem;}
 
 .mt0{margin-top: 0;}
+.mt0-5{margin-top: 0.5rem;}
 .mt1{margin-top: 1rem;}
 
 // TEXT

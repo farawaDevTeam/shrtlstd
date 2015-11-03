@@ -9,4 +9,12 @@ angular.module('connexionModule', [])
 		});
 		
 		self.credentials = {};
+		
+		self.connect = function(isFormValid){
+			console.log(connexionForm.login);
+			if(!isFormValid){
+				return;
+			}
+			console.log('connecting...');
+		};
 	});

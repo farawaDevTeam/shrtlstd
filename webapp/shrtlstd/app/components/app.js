@@ -11,7 +11,8 @@
         'popUpModule',
         'connexionModule',
         'langModule',
-        'scrollModule'
+        'scrollModule',
+        'ngMessages'
         ])
  .config(function($stateProvider, $urlRouterProvider){
     'use strict';

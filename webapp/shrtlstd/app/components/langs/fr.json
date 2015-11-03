@@ -29,17 +29,23 @@
 		"rights": "Tous droits réservés",
 		"made": "Un site web réalisé par"
 	},
+	"forms":{
+		"errors": {
+			"required": "Champ obligatoire",
+			"email": "Email incorrect"
+		}	
+	},
 	"connexion":{
 		"title": "Connexion",
 		"withShrtlstd": "Avec votre compte SHRTLSTD",
 		"or": "ou",
 		"withAccount": "Avec",
-		"login": "Login",
+		"login": "Email",
 		"password": "Mot de passe",
 		"forgottenPwd": "Mot de passe oublié",
 		"rememberMe": "Se souvenir de moi",
-		"notMember": "Pas encore membre ?",
-		"signUp": "Inscrivez-vous gratuitement",
+		"notMember": "Pas de compte ?",
+		"signUp": "Inscris-toi !",
 		"connect": "Connexion"
 	}
 }

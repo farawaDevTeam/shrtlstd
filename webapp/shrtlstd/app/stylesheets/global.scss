@@ -69,6 +69,14 @@ h1 span{
 
 label{font-weight: normal;}
 
+.errors.main-error{
+	background-color: $pinkWarning;
+	border-radius: 5px;
+	padding: 0 0.5rem;
+	line-height: 1.5rem;
+	margin-left: 0;
+}
+
 .errors{
 	color: $redWarning;
 	font-size: 1.1rem;

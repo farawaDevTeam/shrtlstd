@@ -12,7 +12,7 @@ var component = process.env.INIT_CWD.split((__dirname.split('gulp_tasks')[0]))[1
 var distFolder = __dirname + '/../../dist/' + component;
 var ngAnnotate = require('gulp-ng-annotate');
 
-gulp.task('js', ['js-libs'], function(){
+gulp.task('js', ['js-libs', 'ngConfig'], function(){
 
     var env = argv.NODE_ENV ? argv.NODE_ENV : 'dev';
 

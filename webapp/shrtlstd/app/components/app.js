@@ -12,7 +12,8 @@
         'connexionModule',
         'langModule',
         'scrollModule',
-        'ngMessages'
+        'ngMessages',
+        'shrtlstdConfigModule'
         ])
  .config(function($stateProvider, $urlRouterProvider){
     'use strict';

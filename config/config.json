@@ -6,7 +6,7 @@
   "dev": {
     "shrtlstd": {
       "api": {
-        "url": "http://54.201.37.156:8080/short-listed/rest"
+        "url": "http://52.33.13.65:8080/short-listed/rest"
       }
     }
   },

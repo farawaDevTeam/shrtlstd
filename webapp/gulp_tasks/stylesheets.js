@@ -11,10 +11,11 @@ var argv = require('yargs').argv;
 var component = process.env.INIT_CWD.split((__dirname.split('gulp_tasks')[0]))[1];
 var distFolder = __dirname + '/../../dist/' + component;
 var autoprefixer = require('gulp-autoprefixer');
+var minifyCss = require('gulp-minify-css');
 
 gulp.task('css', ['trueCss'], function () {
 
-    var env = argv.NODE_ENV | 'dev';
+    var env = argv.NODE_ENV ? argv.NODE_ENV : 'dev';
 
     return gulp.src([
         buildConfig.src + '/stylesheets/**/*.scss',
@@ -24,6 +25,7 @@ gulp.task('css', ['trueCss'], function () {
         .pipe(sass())
         .pipe(autoprefixer({}))
         .pipe(gulpif(env === 'prod', concat('main.css')))
+        .pipe(minifyCss())
         .pipe(gulp.dest(distFolder + '/stylesheets'));
 });
 
@@ -38,6 +40,8 @@ gulp.task('trueCss', function () {
     });
 
     return gulp.src(cssSrc)
+        .pipe(concat('imported.css'))
+        .pipe(minifyCss())
         .pipe(gulp.dest(distFolder + '/stylesheets'))
 
 });

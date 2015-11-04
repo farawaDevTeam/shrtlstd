@@ -4,6 +4,11 @@
     "dist": "dist"
   },
   "dev": {
+    "shrtlstd": {
+      "api": {
+        "url": "http://54.201.37.156:8080/short-listed/rest"
+      }
+    }
   },
   "prod": {
 

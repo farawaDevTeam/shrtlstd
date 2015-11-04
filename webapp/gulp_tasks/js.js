@@ -14,7 +14,7 @@ var ngAnnotate = require('gulp-ng-annotate');
 
 gulp.task('js', ['js-libs'], function(){
 
-    var env = argv.NODE_ENV | 'dev';
+    var env = argv.NODE_ENV ? argv.NODE_ENV : 'dev';
 
     return  gulp.src([
         buildConfig.src + '/**/*.js',

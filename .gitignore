@@ -1,8 +1,8 @@
 # Build
 dist
 
-# COnfig
-*/config/config.js
+# Config
+config.js
 
 # Node
 node_modules

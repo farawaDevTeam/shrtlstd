@@ -1,21 +1,22 @@
 
 angular.module('preHomeModule', [])
-	.controller('preHomeCtrl', function ($window, $state, langService, $timeout) {
+	.controller('preHomeCtrl', function ($window, $state, $timeout, $rootScope) {
 		'use strict';
 
 		var self = this;
 
-		langService.getLabels(function (labels) {
-			self.labels = labels;
-		});
-
 		self.goHome = function () {
 			$window.localStorage.hasAlreadyCome = true;
 			self.boolSlideUp = true;
-			$timeout(function() {$state.go('home');}, 500);
+			$timeout(function () {
+				$rootScope.$broadcast('shComponent', { name: 'ConnexionHeader', sh: true });
+				$state.go('home');
+			}, 500);
 		};
 
 		//MAIN
+		$rootScope.$broadcast('shComponent', { name: 'ConnexionHeader', sh: false });
+
 		if ($window.localStorage.hasAlreadyCome) {
 			self.goHome();
 			return;

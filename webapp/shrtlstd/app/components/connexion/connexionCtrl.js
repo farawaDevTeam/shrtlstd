@@ -1,5 +1,5 @@
 angular.module('connexionModule', [])
-	.controller('connexionCtrl', function(langService, connexionService, ngDialog){
+	.controller('connexionCtrl', function(langService, connexionService, ngDialog, $rootScope){
 		'use strict';
 		
 		var self = this;
@@ -26,10 +26,16 @@ angular.module('connexionModule', [])
 			connexionService.connect(self.credentials)
 				.success(function(data){
 					console.log('success', data);
+					$rootScope.$broadcast('userConnexion', {pseudo: 'Toto'});
 					ngDialog.close();
 				})
 				.error(function(err){
-					self.connexionForm.mainError = err.message;
+					
+					if(err){
+						self.connexionForm.mainError = err.message;
+						return;
+					}
+					self.connexionForm.mainError = self.labels.forms.errors.unknown;
 				});
 		};
 	});

@@ -25,7 +25,7 @@ gulp.task('css', ['trueCss'], function () {
         .pipe(sass())
         .pipe(autoprefixer({}))
         .pipe(gulpif(env === 'prod', concat('main.css')))
-        .pipe(minifyCss())
+        .pipe(gulpif(env === 'prod', minifyCss()))
         .pipe(gulp.dest(distFolder + '/stylesheets'));
 });
 
@@ -42,6 +42,6 @@ gulp.task('trueCss', function () {
     return gulp.src(cssSrc)
         .pipe(concat('imported.css'))
         .pipe(minifyCss())
-        .pipe(gulp.dest(distFolder + '/stylesheets'))
+        .pipe(gulp.dest(distFolder + '/stylesheets'));
 
 });

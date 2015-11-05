@@ -3,13 +3,9 @@
  */
 
 angular.module('homeModule', [])
-    .controller('homeCtrl', function($http, langService){
+    .controller('homeCtrl', function(){
         'use strict';
         var self = this;
-
-		langService.getLabels(function(labels){
-			self.labels = labels;
-		});
 
         self.colSizeLgMd = {
         	0: 6,

@@ -12,5 +12,13 @@ angular.module('connexionModule')
 				});
 		};
 		
+		connexionService.getUser = function(){
+			return connexionService.user;
+		};
+		
+		connexionService.setUser = function(user){
+			connexionService.user = user;
+		};
+		
 		return connexionService;
 	});

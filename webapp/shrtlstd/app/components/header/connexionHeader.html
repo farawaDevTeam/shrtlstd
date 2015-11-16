@@ -11,7 +11,7 @@
 
 	</nav>
 	<nav class="connexion col-lg-6" ng-show="mainCtrl.connectedUser">
-		<span ng-bind="mainCtrl.connectedUser.pseudo"></span>
-		<input type="button" class="btn btn-primary" value="dec" />
+		<span ng-bind="mainCtrl.labels.header.greetings"></span>, <span ng-bind="mainCtrl.connectedUser.pseudo"></span>
+		<input type="button" class="btn btn-primary fright tt1-5" value="{{mainCtrl.labels.header.disconnect}}" ng-click="mainCtrl.disconnect();"/>
 	</nav>
 </section>

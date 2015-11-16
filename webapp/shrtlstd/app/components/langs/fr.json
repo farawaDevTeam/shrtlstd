@@ -3,7 +3,8 @@
 		"connect": "Se connecter",
 		"signup": "Créer un compte",
 		"joinus": "Rejoignez-nous",
-		"greetings": "Bienvenue"
+		"greetings": "Bienvenue",
+		"disconnect": "Se déconnecter"
 	},
 	"nav":{
 		"home": "Home",

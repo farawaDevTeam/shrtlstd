@@ -16,6 +16,7 @@ angular.module('connexionModule', [])
 		};
 		
 		self.connect = function(){
+					
 			if(!self.connexionForm.$valid){
 				return;
 			}
@@ -26,7 +27,9 @@ angular.module('connexionModule', [])
 			connexionService.connect(self.credentials)
 				.success(function(data){
 					console.log('success', data);
-					$rootScope.$broadcast('userConnexion', {pseudo: 'Toto'});
+					var user = {pseudo: 'Toto'};
+					connexionService.setUser(user);
+					$rootScope.$broadcast('userConnexion', user);
 					ngDialog.close();
 				})
 				.error(function(err){

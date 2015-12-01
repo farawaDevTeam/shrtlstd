@@ -8,7 +8,6 @@
 	<nav class="connexion col-lg-6" ng-show="!mainCtrl.connectedUser">
 		<a href="#" pop-up tpl="components/connexion/connexionPop"><i class="fa fa-unlock"></i> <span ng-bind="mainCtrl.labels.header.connect"></span></a>
 		<a href="#" pop-up tpl="components/signUp/signUpPop"><i class="fa fa-user-plus"></i> <span ng-bind="mainCtrl.labels.header.signup"></span></a>
-
 	</nav>
 	<nav class="connexion col-lg-6" ng-show="mainCtrl.connectedUser">
 		<span ng-bind="mainCtrl.labels.header.greetings"></span>, <span ng-bind="mainCtrl.connectedUser.pseudo"></span>

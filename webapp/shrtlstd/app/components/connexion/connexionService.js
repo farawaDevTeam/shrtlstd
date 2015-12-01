@@ -1,5 +1,5 @@
 angular.module('connexionModule')
-	.factory('connexionService', function (appConfig, $http, $window, $rootScope, ngDialog) {
+	.factory('connexionService', function (appConfig, $http, $window, $rootScope, ngDialog, $q) {
 		'use strict';
 
 
@@ -24,7 +24,9 @@ angular.module('connexionModule')
 			// for FB.getLoginStatus().
 			if (response.status === 'connected') {
 				// Logged into your app and Facebook.
-				connexionService.fb.getUser();
+				connexionService.fb.getUser().then(function(fbUser){
+					connexionService.setUser({ pseudo: fbUser.name, fbId: fbUser.id });
+				});
 			} else if (response.status === 'not_authorized') {
 				// The person is logged into Facebook, but not your app.
 			} else {
@@ -59,9 +61,18 @@ angular.module('connexionModule')
 
 		connexionService.fb = {
 			getUser: function () {
+				// $window.FB.api('/me', function (response) {
+				// 	connexionService.setUser({ pseudo: response.name, fbId: response.id });
+				// });
+				var deferred = $q.defer();
 				$window.FB.api('/me', function (response) {
-					connexionService.setUser({ pseudo: response.name, fbId: response.id });
+					if (!response || response.error) {
+						deferred.reject('Error occured');
+					} else {
+						deferred.resolve(response);
+					}
 				});
+				return deferred.promise;
 			}
 		};
 

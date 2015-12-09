@@ -17,9 +17,6 @@ gulp.task('js', ['js-libs', 'ngConfig'], function () {
     var env = argv.NODE_ENV ? argv.NODE_ENV : 'dev';
 
     return gulp.src([
-        // buildConfig.src + '/**/!(app)*.js',
-        // buildConfig.src + '/**/*.js',
-        
         buildConfig.src + '/**/config.js',
         buildConfig.src + '/**/services.js',
         buildConfig.src + '/**/services/*.js',
@@ -30,7 +27,7 @@ gulp.task('js', ['js-libs', 'ngConfig'], function () {
         '!' + buildConfig.src + '/**/*.spec.js',
     ])
         .pipe(ngAnnotate({ single_quotes: true }))
-    // .pipe(gulpif(env === 'prod', uglify()))
+        .pipe(gulpif(env === 'prod', uglify()))
         .pipe(gulpif(env === 'prod', concat('main.js')))
         .pipe(gulp.dest(distFolder + '/js'));
 });

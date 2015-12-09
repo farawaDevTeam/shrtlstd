@@ -18,11 +18,6 @@ angular.module('connexionModule', [])
 		};
 
 		self.connect = function () {
-
-			// var user = { pseudo: 'Toto', fbId: 'ccc' };
-			// userService.setUser(user);
-			// return;
-
 			if (!self.connexionForm.$valid) {
 				return;
 			}

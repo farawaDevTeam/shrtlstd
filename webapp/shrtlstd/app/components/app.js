@@ -6,6 +6,7 @@
     [
         'ui.router',
         'ngDialog',
+        'ngMessages',
         
         'shrtlstdConfigModule',
         'servicesModule',
@@ -13,11 +14,7 @@
          
         'preHomeModule', 
         'homeModule',
-        //'popUpModule',
         'connexionModule',
-        // 'langModule',
-        // 'scrollModule',
-        'ngMessages',
         'mainModule'
         ])
  .config(function($stateProvider, $urlRouterProvider){

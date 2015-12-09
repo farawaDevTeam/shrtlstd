@@ -61,9 +61,6 @@ angular.module('servicesModule')
 
 		userService.fb = {
 			getUser: function () {
-				// $window.FB.api('/me', function (response) {
-				// 	userService.setUser({ pseudo: response.name, fbId: response.id });
-				// });
 				var deferred = $q.defer();
 				$window.FB.api('/me', function (response) {
 					if (!response || response.error) {

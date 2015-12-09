@@ -49,7 +49,10 @@
 
 		<section class="col-lg-5">
 			<p class="bbtm">{{ctrl.labels.connexion.withAccount}}</p>
-			<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+
+			<div class="fb-login-button" onlogin="checkLoginState();">
+				{{ctrl.labels.connexion.fbConnect}}
+			</div>
 		</section>
 
 	</section>

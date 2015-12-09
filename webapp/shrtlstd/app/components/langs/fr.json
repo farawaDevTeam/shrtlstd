@@ -49,6 +49,7 @@
 		"rememberMe": "Se souvenir de moi",
 		"notMember": "Pas de compte ?",
 		"signUp": "Inscris-toi !",
-		"connect": "Connexion"
+		"connect": "Connexion",
+		"fbConnect": "Se connecter avec Facebook"
 	}
 }

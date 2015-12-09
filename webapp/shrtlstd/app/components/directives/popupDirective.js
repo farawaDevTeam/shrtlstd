@@ -1,4 +1,4 @@
-angular.module('popUpModule', [])
+angular.module('directivesModule')
 	.directive('popUp', function(ngDialog){
 		'use strict';
 		

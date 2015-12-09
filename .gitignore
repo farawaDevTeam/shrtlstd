@@ -1,6 +1,9 @@
 # Build
 dist
 
+# Config
+config.js
+
 # Node
 node_modules
 npm-debug.log

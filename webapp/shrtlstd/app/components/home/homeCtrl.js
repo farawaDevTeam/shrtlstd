@@ -3,13 +3,9 @@
  */
 
 angular.module('homeModule', [])
-    .controller('homeCtrl', function($http, langService){
+    .controller('homeCtrl', function(){
         'use strict';
         var self = this;
-
-		langService.getLabels(function(labels){
-			self.labels = labels;
-		});
 
         self.colSizeLgMd = {
         	0: 6,
@@ -189,36 +185,5 @@ angular.module('homeModule', [])
 				sitePro: ''
 			}
 		}];
-
-		auntheticate();
-
-		/*Permet de se connecter avec un email et un mdp*/
-        function auntheticate() {
-        	$http({method: 'POST', url: 'http://52.25.41.26:8080/short-listed/rest/authenticate?login=root1234@gmail.com&password=Root1234$'}).
-		        then(function(response) {
-		          	self.status = response.status;
-		          	self.data = response.data;
-		          	console.log('self.data1 = ', self.data);
-
-		          	//displayLatestCompet();
-
-		        }, function(response) {
-		          	self.data = response.data || 'Request failed';
-		         	self.status = response.status;
-		         	console.log('self.data2 = ', self.data);
-		    });
-        }
-
-        /*function displayLatestCompet() {
-        	$http({method: 'GET', url: 'http://52.25.41.26:8080/short-listed/rest/projets/inProgress'}).
-		        then(function(response) {
-		          	self.status = response.status;
-		          	self.data = response.data;
-		          	console.log('self.data1 = ', self.data);
-		        }, function(response) {
-		          	self.data = response.data || 'Request failed';
-		         	self.status = response.status;
-		         	console.log('self.data2 = ', self.data);
-		    });
-        }*/
+ 
     });

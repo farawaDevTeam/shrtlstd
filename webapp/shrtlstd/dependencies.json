@@ -3,7 +3,8 @@
     "angular/angular",
     "angular-ui-router/release/angular-ui-router",
     "jquery/dist/jquery",
-    "ng-dialog/js/ngDialog"
+    "ng-dialog/js/ngDialog",
+    "angular-messages/angular-messages"
   ],
   "css":[
     "ng-dialog/css/ngDialog",

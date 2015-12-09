@@ -15,8 +15,7 @@ describe('preHome controller', function () {
 		_httpBackend.whenGET(/\/*.html/).respond(200);
 
 		ctrl = $injector.get('$controller')('preHomeCtrl', {
-			$state: _state,
-			langService: langServiceMock
+			$state: _state
 		});
 	}));
 

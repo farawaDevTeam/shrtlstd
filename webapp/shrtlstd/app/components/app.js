@@ -5,13 +5,17 @@
  angular.module('shrtlstdModule', 
     [
         'ui.router',
-        'ngDialog', 
+        'ngDialog',
+        'ngMessages',
+        
+        'shrtlstdConfigModule',
+        'servicesModule',
+        'directivesModule',
+         
         'preHomeModule', 
         'homeModule',
-        'popUpModule',
         'connexionModule',
-        'langModule',
-        'scrollModule'
+        'mainModule'
         ])
  .config(function($stateProvider, $urlRouterProvider){
     'use strict';

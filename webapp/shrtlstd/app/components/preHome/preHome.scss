@@ -1,5 +1,6 @@
+@import '../../stylesheets/constants';
+
 .content{
-	background-image : url(../../images/bgd.jpeg);
 	background-size: cover;
 	height:100%;
 
@@ -15,24 +16,17 @@
   	margin-left: -224px;
   	margin-top: -48px;
   	color : #fff;
-  	-webkit-transition: color 2s; /* For Safari 3.1 to 6.0 */
     transition: color 2s;
+	
+	
+	.btn-primary{
+		font-size : 25px;
+	}
 }
 
 .welcome:hover{
-	color : #d1b816;
+	color : $mainYellow;
 	cursor: pointer;
-}
-
-button.btn-primary{
-	font-size : 25px !important;
-	background-color: #99d5cb;
-	border-color :#d1b816;
-}
-
-button.btn-primary:hover{
-	background-color: #d1b816;
-	border-color :#99d5cb;
 }
 
 .slideUp, .slideUp .welcome, .slideUp .copyright{

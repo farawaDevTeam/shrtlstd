@@ -1,8 +1,21 @@
+@import '../../stylesheets/constants';
+
 .connexion{
 	
 	.mb0{margin-bottom: 0;}
 	
-	p{
+	p, div.row{
 		margin-bottom: 1rem; 
+	}
+	
+	.connexion-form{
+		.btn-primary{
+			font-size: 2rem;
+			letter-spacing: 0.3rem;
+		}
+		
+		a{
+			color: $mainBlue;
+		}
 	}
 }

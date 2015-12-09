@@ -12,27 +12,36 @@ var component = process.env.INIT_CWD.split((__dirname.split('gulp_tasks')[0]))[1
 var distFolder = __dirname + '/../../dist/' + component;
 var ngAnnotate = require('gulp-ng-annotate');
 
-gulp.task('js', ['js-libs', 'ngConfig'], function(){
+gulp.task('js', ['js-libs', 'ngConfig'], function () {
 
     var env = argv.NODE_ENV ? argv.NODE_ENV : 'dev';
 
-    return  gulp.src([
-        buildConfig.src + '/**/*.js',
-        '!' + buildConfig.src + '/**/*.spec.js'
+    return gulp.src([
+        // buildConfig.src + '/**/!(app)*.js',
+        // buildConfig.src + '/**/*.js',
+        
+        buildConfig.src + '/**/config.js',
+        buildConfig.src + '/**/services.js',
+        buildConfig.src + '/**/services/*.js',
+        buildConfig.src + '/**/directives.js',
+        buildConfig.src + '/**/directives/*.js',
+        buildConfig.src + '/**/!(app)*.js',
+        buildConfig.src + '/**/app.js',
+        '!' + buildConfig.src + '/**/*.spec.js',
     ])
-        .pipe(ngAnnotate({single_quotes: true}))
-        .pipe(gulpif(env === 'prod', uglify()))
+        .pipe(ngAnnotate({ single_quotes: true }))
+    // .pipe(gulpif(env === 'prod', uglify()))
         .pipe(gulpif(env === 'prod', concat('main.js')))
         .pipe(gulp.dest(distFolder + '/js'));
 });
 
-gulp.task('js-libs', function(){
+gulp.task('js-libs', function () {
     var libs = require('../' + component + '/dependencies.json').libs;
 
     var libsSrc = [];
 
-    libs.forEach(function(lib){
-        libsSrc.push(__dirname + '/../../node_modules/'+ lib + '.js');
+    libs.forEach(function (lib) {
+        libsSrc.push(__dirname + '/../../node_modules/' + lib + '.js');
     });
     return gulp.src(libsSrc).pipe(uglify())
         .pipe(concat('libs.js'))

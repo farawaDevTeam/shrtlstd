@@ -1,4 +1,4 @@
-angular.module('scrollModule', [])
+angular.module('directivesModule')
     .directive('scroll', function ($window) {
         'use strict';
 

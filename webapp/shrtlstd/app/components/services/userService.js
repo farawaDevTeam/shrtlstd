@@ -1,12 +1,12 @@
-angular.module('connexionModule')
-	.factory('connexionService', function (appConfig, $http, $window, $rootScope, ngDialog, $q) {
+angular.module('servicesModule')
+	.factory('userService', function (appConfig, $http, $window, $rootScope, ngDialog, $q) {
 		'use strict';
 
 
 
-		var connexionService = {};
+		var userService = {};
 
-		connexionService.asyncFbInit = function () {
+		userService.asyncFbInit = function () {
 			$window.FB.init({
 				appId: appConfig.fbAppId,
 				status: true,
@@ -24,8 +24,8 @@ angular.module('connexionModule')
 			// for FB.getLoginStatus().
 			if (response.status === 'connected') {
 				// Logged into your app and Facebook.
-				connexionService.fb.getUser().then(function(fbUser){
-					connexionService.setUser({ pseudo: fbUser.name, fbId: fbUser.id });
+				userService.fb.getUser().then(function(fbUser){
+					userService.setUser({ pseudo: fbUser.name, fbId: fbUser.id });
 				});
 			} else if (response.status === 'not_authorized') {
 				// The person is logged into Facebook, but not your app.
@@ -41,7 +41,7 @@ angular.module('connexionModule')
 			});
 		};
 
-		connexionService.connect = function (credentials) {
+		userService.connect = function (credentials) {
 			return $http.post(appConfig.api.url + '/authenticate',
 				'login=' + credentials.login + '&password=' + credentials.password,
 				{
@@ -49,20 +49,20 @@ angular.module('connexionModule')
 				});
 		};
 
-		connexionService.getUser = function () {
-			return connexionService.user;
+		userService.getUser = function () {
+			return userService.user;
 		};
 
-		connexionService.setUser = function (user) {
-			connexionService.user = user;
+		userService.setUser = function (user) {
+			userService.user = user;
 			$rootScope.$broadcast('userConnexion', user);
 			ngDialog.close();
 		};
 
-		connexionService.fb = {
+		userService.fb = {
 			getUser: function () {
 				// $window.FB.api('/me', function (response) {
-				// 	connexionService.setUser({ pseudo: response.name, fbId: response.id });
+				// 	userService.setUser({ pseudo: response.name, fbId: response.id });
 				// });
 				var deferred = $q.defer();
 				$window.FB.api('/me', function (response) {
@@ -76,5 +76,5 @@ angular.module('connexionModule')
 			}
 		};
 
-		return connexionService;
+		return userService;
 	});

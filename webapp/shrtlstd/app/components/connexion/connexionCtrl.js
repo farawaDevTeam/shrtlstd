@@ -1,8 +1,8 @@
 angular.module('connexionModule', [])
-	.controller('connexionCtrl', function (langService, connexionService) {
+	.controller('connexionCtrl', function (langService, userService) {
 		'use strict';
 
-		connexionService.asyncFbInit();
+		userService.asyncFbInit();
 
 		var self = this;
 
@@ -20,7 +20,7 @@ angular.module('connexionModule', [])
 		self.connect = function () {
 
 			// var user = { pseudo: 'Toto', fbId: 'ccc' };
-			// connexionService.setUser(user);
+			// userService.setUser(user);
 			// return;
 
 			if (!self.connexionForm.$valid) {
@@ -30,11 +30,11 @@ angular.module('connexionModule', [])
 
 			self.connexionForm.mainError = null;
 
-			connexionService.connect(self.credentials)
+			userService.connect(self.credentials)
 				.success(function (data) {
 					console.log('success', data);
 					var user = { pseudo: 'Toto' };
-					connexionService.setUser(user);
+					userService.setUser(user);
 				})
 				.error(function (err) {
 

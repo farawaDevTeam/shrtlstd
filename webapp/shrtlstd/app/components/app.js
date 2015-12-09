@@ -5,15 +5,19 @@
  angular.module('shrtlstdModule', 
     [
         'ui.router',
-        'ngDialog', 
+        'ngDialog',
+        
+        'shrtlstdConfigModule',
+        'servicesModule',
+        'directivesModule',
+         
         'preHomeModule', 
         'homeModule',
-        'popUpModule',
+        //'popUpModule',
         'connexionModule',
-        'langModule',
-        'scrollModule',
+        // 'langModule',
+        // 'scrollModule',
         'ngMessages',
-        'shrtlstdConfigModule',
         'mainModule'
         ])
  .config(function($stateProvider, $urlRouterProvider){

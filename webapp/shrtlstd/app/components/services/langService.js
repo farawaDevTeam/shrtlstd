@@ -1,4 +1,4 @@
-angular.module('langModule', [])
+angular.module('servicesModule')
 	.factory('langService', function($http, $window){
 		'use strict';
 		

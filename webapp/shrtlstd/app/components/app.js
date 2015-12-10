@@ -15,7 +15,8 @@
         'preHomeModule', 
         'homeModule',
         'connexionModule',
-        'mainModule'
+        'mainModule',
+        'signUpModule'
         ])
  .config(function($stateProvider, $urlRouterProvider){
     'use strict';

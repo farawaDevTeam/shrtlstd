@@ -1,1 +1,40 @@
-SIGN UP
+<section class="mainContent iBlock wFull" ng-controller="signUpCtrl as ctrl">
+
+	<h4>{{ctrl.labels.signUp.title}}</h4>
+	<section class="mt1 ftAmatic tt2">
+		<form name="ctrl.signUpForm" ng-submit="ctrl.signUp();" novalidate>
+
+			<div class="row">
+				<label class="col-lg-3 mt0_5">{{ctrl.labels.signUp.login}} :</label>
+				<div class="col-lg-5 ftNormal tt1-5">
+					<input type="email" class="form-control" name="login" type="text" ng-model="ctrl.newUser.login" required/>
+					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.login.$error" class="errors" role="alert">
+						<div ng-message="required">{{ctrl.labels.forms.errors.required}}</div>
+						<div ng-message="email">{{ctrl.labels.forms.errors.email}}</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<label class="col-lg-3 mt0-5">{{ctrl.labels.signUp.password}} :</label>
+				<div class="col-lg-5 ftNormal tt1-5">
+					<input class="form-control" name="password" type="password" ng-model="ctrl.credentials.password" required/>
+					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.password.$error" class="errors" role="alert">
+						<div ng-message="required">{{ctrl.labels.forms.errors.required}}</div>
+					</div>
+				</div>
+			</div>
+			
+			<div ng-show="ctrl.signUpForm.$submitted && ctrl.signUpForm.mainError" class="errors main-error ftNormal" role="alert">
+				{{ctrl.signUpForm.mainError}}
+			</div>
+
+
+			<section class="col-lg-offset-4 col-lg-8">
+				<input type="submit" class="btn btn-primary mb1 tt1-5 ftAmatic" value="{{ctrl.labels.signUp.signUp}}" />
+			</section>
+
+		</form>
+	</section>
+
+</section>

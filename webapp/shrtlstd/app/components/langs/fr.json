@@ -51,5 +51,21 @@
 		"signUp": "Inscris-toi !",
 		"connect": "Connexion",
 		"fbConnect": "Se connecter avec Facebook"
+	},
+	"signUp":{
+		"title": "Créer un compte",
+		"login": "Email",
+		"password": "Mot de passe",
+		"surname": "Nom",
+		"name": "Prénom",
+		"pseudo": "Pseudo",
+		"avatar": "Avatar",
+		"professionalSituation": "Situation professionnelle",
+		"company": "entreprise",
+		"professionalSite": "Site professionnel",
+		"personnalSite": "Site personnel",
+		"userType": "Type d'utilisateur",
+		"job": "Métier",
+		"signUp": "Créer mon compte"
 	}
 }

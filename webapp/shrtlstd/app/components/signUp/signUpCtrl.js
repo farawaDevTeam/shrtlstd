@@ -10,6 +10,8 @@ angular.module('signUpModule', [])
 		
 		self.signUp = function(){
 			console.log('signing up...');
+			console.log(self.newUser);
+			console.log(self.signUpForm);
 		};
 
 	});

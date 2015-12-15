@@ -61,11 +61,63 @@
 		"pseudo": "Pseudo",
 		"avatar": "Avatar",
 		"professionalSituation": "Situation professionnelle",
-		"company": "entreprise",
+		"company": "Entreprise",
 		"professionalSite": "Site professionnel",
 		"personnalSite": "Site personnel",
 		"userType": "Type d'utilisateur",
 		"job": "Métier",
 		"signUp": "Créer mon compte"
+	},
+	"select":{
+		"jobs": [
+			{
+				"code": "ST",
+				"libelle": "Stratégie"
+			},
+			{
+				"code": "IT",
+				"libelle": "Digital Social Media / Nouvelles Technologies / Web Marketing"
+			},
+			{
+				"code": "EV",
+				"libelle": "Event"
+			},
+			{
+				"code": "DA",
+				"libelle": "Création Direction Artistique"
+			},
+			{
+				"code": "CR",
+				"libelle": "Création Conception Rédaction"
+			},
+			{
+				"code": "ME",
+				"libelle": "Media"
+			}
+		],
+		"users": [
+			{
+				"code": "C",
+				"libelle": "Candidat"
+			},
+			{
+				"code": "P",
+				"libelle": "Professionnel"
+			}
+		],
+		"professionalSituation": [
+			{
+				"code": "ET",
+				"libelle": "Etudiant"
+			},
+			{
+				"code": "RE",
+				"libelle": "Recherche d'emploi"
+			},
+			{
+				"code": "SA",
+				"libelle": "Salarié"
+			}
+		]
 	}
 }

@@ -83,7 +83,8 @@ label{font-weight: normal;}
 	margin-left: 0.5rem;
 }
 
-.ng-submitted input.ng-invalid {
+.ng-submitted input.ng-invalid,
+.ng-submitted select.ng-invalid {
 	border-color: $redWarning;
 }
 

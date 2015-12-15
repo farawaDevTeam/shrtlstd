@@ -4,7 +4,8 @@
 	<section class="mt1 ftAmatic tt2">
 		<form name="ctrl.signUpForm" ng-submit="ctrl.signUp();" novalidate>
 
-			<div class="row">
+			<!--EMAIL-->
+			<div class="row mb1">
 				<label class="col-lg-3 mt0_5">{{ctrl.labels.signUp.login}} :</label>
 				<div class="col-lg-5 ftNormal tt1-5">
 					<input type="email" class="form-control" name="login" type="text" ng-model="ctrl.newUser.login" required/>
@@ -15,16 +16,100 @@
 				</div>
 			</div>
 
-			<div class="row">
+			<!--PASSWORD-->
+			<div class="row mb1">
 				<label class="col-lg-3 mt0-5">{{ctrl.labels.signUp.password}} :</label>
 				<div class="col-lg-5 ftNormal tt1-5">
-					<input class="form-control" name="password" type="password" ng-model="ctrl.credentials.password" required/>
+					<input class="form-control" name="password" type="password" ng-model="ctrl.newUser.password" required/>
 					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.password.$error" class="errors" role="alert">
 						<div ng-message="required">{{ctrl.labels.forms.errors.required}}</div>
 					</div>
 				</div>
 			</div>
+
+			<!--SURNAME-->
+			<div class="row mb1">
+				<label class="col-lg-3 mt0-5">{{ctrl.labels.signUp.surname}} :</label>
+				<div class="col-lg-5 ftNormal tt1-5">
+					<input class="form-control" name="surname" type="text" ng-model="ctrl.newUser.surname" required/>
+					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.surname.$error" class="errors" role="alert">
+						<div ng-message="required">{{ctrl.labels.forms.errors.required}}</div>
+					</div>
+				</div>
+			</div>
+
+			<!--NAME-->
+			<div class="row mb1">
+				<label class="col-lg-3 mt0-5">{{ctrl.labels.signUp.name}} :</label>
+				<div class="col-lg-5 ftNormal tt1-5">
+					<input class="form-control" name="name" type="text" ng-model="ctrl.newUser.name" required/>
+					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.name.$error" class="errors" role="alert">
+						<div ng-message="required">{{ctrl.labels.forms.errors.required}}</div>
+					</div>
+				</div>
+			</div>
+
+			<!--PROFFESSIONAL SITUATION-->
+			<div class="row mb1">
+				<label class="col-lg-3 mt0-5">{{ctrl.labels.signUp.professionalSituation}} :</label>
+				<div class="col-lg-5 ftNormal tt1-5">
+					<select class="form-control" name="professionalSituation" ng-model="ctrl.newUser.situationPro" ng-options="situation.code as situation.libelle for situation in ctrl.labels.select.professionalSituation"
+					required>
+					</select>
+					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.professionalSituation.$error" class="errors" role="alert">
+						<div ng-message="required">{{ctrl.labels.forms.errors.required}}</div>
+					</div>
+				</div>
+			</div>
 			
+			<!--COMPANY-->
+			<div class="row mb1">
+				<label class="col-lg-3 mt0-5">{{ctrl.labels.signUp.company}} :</label>
+				<div class="col-lg-5 ftNormal tt1-5">
+					<input class="form-control" name="company" type="text" ng-model="ctrl.newUser.entreprise"/>
+				</div>
+			</div>
+			
+			<!--POFESSIONAL SITE-->
+			<div class="row mb1">
+				<label class="col-lg-3 mt0-5">{{ctrl.labels.signUp.professionalSite}} :</label>
+				<div class="col-lg-5 ftNormal tt1-5">
+					<input class="form-control" name="company" type="text" ng-model="ctrl.newUser.sitePro"/>
+				</div>
+			</div>
+			
+			<!--PERSONAL SITE-->
+			<div class="row mb1">
+				<label class="col-lg-3 mt0-5">{{ctrl.labels.signUp.personnalSite}} :</label>
+				<div class="col-lg-5 ftNormal tt1-5">
+					<input class="form-control" name="company" type="text" ng-model="ctrl.newUser.sitePerso"/>
+				</div>
+			</div>
+			
+			<!--USER TYPE-->
+			<div class="row mb1">
+				<label class="col-lg-3 mt0-5">{{ctrl.labels.signUp.userType}} :</label>
+				<div class="col-lg-5 ftNormal tt1-5">
+					<select class="form-control" name="userType" ng-model="ctrl.newUser.userType" ng-options="type.code as type.libelle for type in ctrl.labels.select.users" required>
+					</select>
+					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.userType.$error" class="errors" role="alert">
+						<div ng-message="required">{{ctrl.labels.forms.errors.required}}</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--JOB-->
+			<div class="row mb1">
+				<label class="col-lg-3 mt0-5">{{ctrl.labels.signUp.job}} :</label>
+				<div class="col-lg-5 ftNormal tt1-5">
+					<select class="form-control" name="job" ng-model="ctrl.newUser.metier" ng-options="job.code as job.libelle for job in ctrl.labels.select.jobs" required>
+					</select>
+					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.job.$error" class="errors" role="alert">
+						<div ng-message="required">{{ctrl.labels.forms.errors.required}}</div>
+					</div>
+				</div>
+			</div>
+
 			<div ng-show="ctrl.signUpForm.$submitted && ctrl.signUpForm.mainError" class="errors main-error ftNormal" role="alert">
 				{{ctrl.signUpForm.mainError}}
 			</div>

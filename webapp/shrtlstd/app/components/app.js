@@ -9,6 +9,7 @@
         'ngMessages',
         
         'shrtlstdConfigModule',
+        'modelsModule',
         'servicesModule',
         'directivesModule',
          

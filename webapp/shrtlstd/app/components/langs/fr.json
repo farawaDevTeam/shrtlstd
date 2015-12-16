@@ -24,7 +24,7 @@
 		"winner": "... the winner is"
 	},
 	"prehome":{
-		"welcome": "bienvenue",
+		"welcome": "Bienvenue",
 		"go": "Se lancer"
 	},
 	"footer":{
@@ -66,7 +66,9 @@
 		"personnalSite": "Site personnel",
 		"userType": "Type d'utilisateur",
 		"job": "Métier",
-		"signUp": "Créer mon compte"
+		"signUp": "Créer mon compte",
+		"created": "Votre compte a bien été créé",
+		"connect": "Connectez-vous"
 	},
 	"select":{
 		"jobs": [

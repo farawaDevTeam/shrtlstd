@@ -72,6 +72,10 @@ angular.module('servicesModule')
 				return deferred.promise;
 			}
 		};
+		
+		userService.createUser = function(user){
+			return $http.post(appConfig.api.url + '/user/register', user);
+		};
 
 		return userService;
 	});

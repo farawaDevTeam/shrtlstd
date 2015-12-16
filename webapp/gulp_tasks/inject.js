@@ -16,6 +16,8 @@ var injectFiles = function (cb) {
     var sources = gulp.src([distFolder + '/stylesheets/**/*.css',
         distFolder + '/js/libs.js',
         distFolder + '/js/**/config.js',
+        distFolder + '/js/**/models.js',
+        distFolder + '/js/**/models/*.js',
         distFolder + '/js/**/services.js',
         distFolder + '/js/**/services/*.js',
         distFolder + '/js/**/directives.js',

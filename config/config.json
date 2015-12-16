@@ -7,7 +7,7 @@
     "shrtlstd": {
       "fbAppId": "555335207950100",
       "api": {
-        "url": "http://52.33.13.65:8080/short-listed/rest"
+        "url": "http://localhost:9999/short-listed/rest"
       }
     }
   },

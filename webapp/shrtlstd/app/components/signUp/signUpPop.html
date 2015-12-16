@@ -2,7 +2,7 @@
 
 	<h4>{{ctrl.labels.signUp.title}}</h4>
 	<section class="mt1 ftAmatic tt2">
-		<form name="ctrl.signUpForm" ng-submit="ctrl.signUp();" novalidate>
+		<form name="ctrl.signUpForm" ng-submit="ctrl.signUp();" novalidate ng-hide="ctrl.userIsCreated">
 
 			<!--EMAIL-->
 			<div class="row mb1">
@@ -12,6 +12,7 @@
 					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.login.$error" class="errors" role="alert">
 						<div ng-message="required">{{ctrl.labels.forms.errors.required}}</div>
 						<div ng-message="email">{{ctrl.labels.forms.errors.email}}</div>
+						<div ng-message="field">{{ctrl.signUpForm.fieldsErrors.email}}</div>
 					</div>
 				</div>
 			</div>
@@ -23,6 +24,7 @@
 					<input class="form-control" name="password" type="password" ng-model="ctrl.newUser.password" required/>
 					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.password.$error" class="errors" role="alert">
 						<div ng-message="required">{{ctrl.labels.forms.errors.required}}</div>
+						<div ng-message="field">{{ctrl.signUpForm.fieldsErrors.password}}</div>
 					</div>
 				</div>
 			</div>
@@ -31,9 +33,10 @@
 			<div class="row mb1">
 				<label class="col-lg-3 mt0-5">{{ctrl.labels.signUp.surname}} :</label>
 				<div class="col-lg-5 ftNormal tt1-5">
-					<input class="form-control" name="surname" type="text" ng-model="ctrl.newUser.surname" required/>
-					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.surname.$error" class="errors" role="alert">
+					<input class="form-control" name="nom" type="text" ng-model="ctrl.newUser.nom" required/>
+					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.nom.$error" class="errors" role="alert">
 						<div ng-message="required">{{ctrl.labels.forms.errors.required}}</div>
+						<div ng-message="field">{{ctrl.signUpForm.fieldsErrors.nom}}</div>
 					</div>
 				</div>
 			</div>
@@ -42,9 +45,22 @@
 			<div class="row mb1">
 				<label class="col-lg-3 mt0-5">{{ctrl.labels.signUp.name}} :</label>
 				<div class="col-lg-5 ftNormal tt1-5">
-					<input class="form-control" name="name" type="text" ng-model="ctrl.newUser.name" required/>
-					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.name.$error" class="errors" role="alert">
+					<input class="form-control" name="prenom" type="text" ng-model="ctrl.newUser.prenom" required/>
+					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.prenom.$error" class="errors" role="alert">
 						<div ng-message="required">{{ctrl.labels.forms.errors.required}}</div>
+						<div ng-message="field">{{ctrl.signUpForm.fieldsErrors.prenom}}</div>
+					</div>
+				</div>
+			</div>
+
+			<!--PSEUDO-->
+			<div class="row mb1">
+				<label class="col-lg-3 mt0-5">{{ctrl.labels.signUp.pseudo}} :</label>
+				<div class="col-lg-5 ftNormal tt1-5">
+					<input class="form-control" name="pseudo" type="text" ng-model="ctrl.newUser.pseudo" required/>
+					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.pseudo.$error" class="errors" role="alert">
+						<div ng-message="required">{{ctrl.labels.forms.errors.required}}</div>
+						<div ng-message="field">{{ctrl.signUpForm.fieldsErrors.pseudo}}</div>
 					</div>
 				</div>
 			</div>
@@ -58,6 +74,7 @@
 					</select>
 					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.professionalSituation.$error" class="errors" role="alert">
 						<div ng-message="required">{{ctrl.labels.forms.errors.required}}</div>
+						<div ng-message="field">{{ctrl.signUpForm.fieldsErrors.situationPro}}</div>
 					</div>
 				</div>
 			</div>
@@ -94,6 +111,7 @@
 					</select>
 					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.userType.$error" class="errors" role="alert">
 						<div ng-message="required">{{ctrl.labels.forms.errors.required}}</div>
+						<div ng-message="field">{{ctrl.signUpForm.fieldsErrors.userType}}</div>
 					</div>
 				</div>
 			</div>
@@ -106,6 +124,7 @@
 					</select>
 					<div ng-show="ctrl.signUpForm.$submitted" ng-messages="ctrl.signUpForm.job.$error" class="errors" role="alert">
 						<div ng-message="required">{{ctrl.labels.forms.errors.required}}</div>
+						<div ng-message="field">{{ctrl.signUpForm.fieldsErrors.metier}}</div>
 					</div>
 				</div>
 			</div>
@@ -120,6 +139,13 @@
 			</section>
 
 		</form>
+		
+		<div ng-show="ctrl.userIsCreated">{{ctrl.labels.signUp.created}}
+			
+				<p class="mb0">
+					<a href="#" pop-up tpl="components/connexion/connexionPop">{{ctrl.labels.signUp.connect}}</a>
+				</p>
+		</div>
 	</section>
 
 </section>

@@ -1,5 +1,5 @@
 angular.module('connexionModule', [])
-	.controller('connexionCtrl', function (langService, userService) {
+	.controller('connexionCtrl', function (langService, userService, formService) {
 		'use strict';
 
 		userService.asyncFbInit();
@@ -18,12 +18,12 @@ angular.module('connexionModule', [])
 		};
 
 		self.connect = function () {
+			self.connexionForm = formService.cleanFieldError(self.connexionForm);
+			
 			if (!self.connexionForm.$valid) {
 				return;
 			}
 			console.log('connecting...');
-
-			self.connexionForm.mainError = null;
 
 			userService.connect(self.credentials)
 				.success(function (data) {
@@ -32,12 +32,7 @@ angular.module('connexionModule', [])
 					userService.setUser(user);
 				})
 				.error(function (err) {
-
-					if (err) {
-						self.connexionForm.mainError = err.message;
-						return;
-					}
-					self.connexionForm.mainError = self.labels.forms.errors.unknown;
+					self.connexionForm = formService.manageError(err, self.connexionForm, self.labels.forms.errors.unknown);
 				});
 		};
 	});

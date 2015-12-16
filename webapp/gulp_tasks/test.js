@@ -24,6 +24,8 @@ gulp.task('test', function (cb) {
         [
             __dirname + '/../../node_modules/angular-mocks/angular-mocks.js',
             jsPath + '/**/config.js',
+            jsPath + '/**/models.js',
+            jsPath + '/**/models/*.js',
             jsPath + '/**/services.js',
             jsPath + '/**/services/*.js',
             jsPath + '/**/directives.js',

@@ -18,6 +18,8 @@ gulp.task('js', ['js-libs', 'ngConfig'], function () {
 
     return gulp.src([
         buildConfig.src + '/**/config.js',
+        buildConfig.src + '/**/models.js',
+        buildConfig.src + '/**/models/*.js',
         buildConfig.src + '/**/services.js',
         buildConfig.src + '/**/services/*.js',
         buildConfig.src + '/**/directives.js',

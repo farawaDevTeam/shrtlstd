@@ -17,7 +17,7 @@ var distFolder = __dirname + '/../../dist/' + component;
 gulp.task('serve', ['build'], function() {
 
     connect.server({
-        port: 4500,
+        port: buildConfig[component].port || 4500,
         root: distFolder,
         livereload: true
     });

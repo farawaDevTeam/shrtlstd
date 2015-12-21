@@ -44,7 +44,7 @@ h4{
 h1 span{
 	border: solid 3px $mainYellow;
 	padding: 10px;
-	color : $mainBlue;
+	color: $mainBlue;
 }
 
 .copyright {
@@ -61,11 +61,21 @@ h1 span{
 	font-size : 20px;
 }
 
-.ngdialog.ngdialog-theme-default .ngdialog-content{
-	width: 700px!important;
-}
+.shrtlstd{
+	.ngdialog{
+		overflow-y: scroll; 
+	}
+	
+	.ngdialog.ngdialog-theme-default .ngdialog-content{
+		width: 700px;
+	}
 
-.ngdialog-overlay{background: rgba(50, 47, 58, 0.5)!important;}
+	.ngdialog-overlay{
+		background: rgba(50, 47, 58, 0.5);
+		right: 15px;
+	}
+	
+}  
 
 label{font-weight: normal;}
 

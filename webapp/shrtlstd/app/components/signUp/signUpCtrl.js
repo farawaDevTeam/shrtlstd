@@ -11,7 +11,7 @@ angular.module('signUpModule', [])
 		self.userIsCreated = false;
 		
 		self.newUser = new User();
-		// self.newUser = new User('toto@yopmail.com', 'Passwd1$', 'pseudo', 'nom', 'prenom', 'avatar', 'ET', 'entreprise', 'sitePro', 'sitePerso', 'C', 'IT');
+		self.newUser = new User('toto@yopmail.com', 'Passwd1$', 'pseudo', 'nom', 'prenom', 'avatar', 'ET', 'entreprise', 'sitePro', 'sitePerso', 'C', 'IT');
 
 		self.signUp = function () {
 			self.signUpForm = formService.cleanFieldError(self.signUpForm);

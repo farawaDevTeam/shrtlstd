@@ -1,5 +1,5 @@
 angular.module('mainModule', [])
-	.controller('mainController', function (langService, $scope) {
+	.controller('mainCtrl', function (langService, $scope) {
 		'use strict';
 
 		var self = this;

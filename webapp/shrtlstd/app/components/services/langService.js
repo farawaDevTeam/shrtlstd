@@ -4,8 +4,14 @@ angular.module('servicesModule')
 		
 		var langFactory = {};
 		
-		langFactory.getLabels = function(cb){
-			var langName = $window.sessionStorage.langName ? $window.sessionStorage.langName : navigator.language;
+		langFactory.getLabels = function(cb, getDefault){
+			var langName;
+			if(getDefault){
+				langName = 'fr';
+			}
+			else{
+				langName = $window.sessionStorage.langName ? $window.sessionStorage.langName : navigator.language.split('-')[0].toLowerCase();
+			}
 			
 			if(!langFactory[langName]){
 			
@@ -13,6 +19,11 @@ angular.module('servicesModule')
 					.success(function(labels){
 						langFactory[langName] = labels;
 						cb && cb(langFactory[langName]);
+					})
+					.error(function(err, status){
+						if(status === 404){
+							langFactory.getLabels(cb, true);
+						}
 					});
 			}
 			else{

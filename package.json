@@ -46,6 +46,6 @@
     "angular-ui-router": "^0.2.15",
     "jquery": "^2.1.4",
     "lodash": "^3.10.1",
-    "ng-dialog": "^0.5.5"
+    "ng-dialog": "^0.5.6"
   }
 }

@@ -5,11 +5,10 @@ angular.module('servicesModule')
 		var formService = {};
 
 		formService.manageError = function (err, form, unknowMsg) {
-			console.log(err);
-			if (err.message) {
+			if (err && err.message) {
 				form.mainError = err.message;
 			}
-			else if (err.length) {
+			else if (err && err.length) {
 				err.forEach(function (error) {
 					form.fieldsErrors[error.field] = error.message;
 					form[error.field].$setValidity('field', false);

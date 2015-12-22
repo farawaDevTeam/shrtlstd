@@ -121,5 +121,11 @@
 				"libelle": "Salarié"
 			}
 		]
+	},
+	"confirm":{
+		"really": "Vraiment ?",
+		"message": "Voulez-vous vraiment fermer cette pop up ?",
+		"yes": "Oui",
+		"no": "Non"
 	}
 }

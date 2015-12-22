@@ -40,8 +40,9 @@ gulp.task('trueCss', function () {
     });
 
     return gulp.src(cssSrc)
+        // .pipe(autoprefixer({}))
         .pipe(concat('imported.css'))
-        .pipe(minifyCss())
+        // .pipe(minifyCss())
         .pipe(gulp.dest(distFolder + '/stylesheets'));
 
 });

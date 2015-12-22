@@ -75,6 +75,17 @@ h1 span{
 		right: 15px;
 	}
 	
+	input:focus{border-color: $mainBlue;}
+
+	.btn-primary{
+		background-color: $mainBlue;
+		border: none;
+	}
+
+	.btn-primary:hover{
+		background-color: $mainYellow;
+	}
+	
 }  
 
 label{font-weight: normal;}
@@ -98,16 +109,8 @@ label{font-weight: normal;}
 	border-color: $redWarning;
 }
 
-input:focus{border-color: $mainBlue!important;}
+button:focus, input[type='button']:focus, a:focus {outline:0;}
 
-.btn-primary{
-	background-color: $mainBlue!important;
-	border: none!important;
-}
-
-.btn-primary:hover{
-	background-color: $mainYellow!important;
-}
 
 // ATOMIC - CSS
 
@@ -128,6 +131,9 @@ input:focus{border-color: $mainBlue!important;}
 .tt1-2{font-size: 1.2rem;}
 .tt1-5{font-size: 1.5rem;}
 .tt2{font-size: 2rem;}
+
+// LETTER-SPACING
+.ls0-3{letter-spacing: 0.3rem;}
 
 // MARGIN
 .mb0{margin-bottom: 0;}
